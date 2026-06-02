@@ -1,0 +1,528 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decap CMS 本地演示</title>
+    <!-- 引入 Tailwind CSS 用于快速样式 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Font Awesome 图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        
+        .cms-sidebar { transition: all 0.3s ease; }
+        .fade-in { animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* 模拟 Markdown 预览样式 */
+        .markdown-preview h1 { font-size: 1.5em; font-weight: bold; margin-bottom: 0.5em; }
+        .markdown-preview h2 { font-size: 1.25em; font-weight: bold; margin-bottom: 0.5em; }
+        .markdown-preview p { margin-bottom: 1em; line-height: 1.6; }
+        .markdown-preview ul { list-style-type: disc; padding-left: 1.5em; margin-bottom: 1em; }
+        .markdown-preview blockquote { border-left: 4px solid #e2e8f0; padding-left: 1em; color: #64748b; font-style: italic; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans h-screen flex overflow-hidden">
+
+    <!-- 侧边栏导航 -->
+    <aside class="w-64 bg-white border-r border-gray-200 flex flex-col shadow-sm z-10">
+        <div class="p-6 border-b border-gray-100 flex items-center gap-3">
+            <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">D</div>
+            <h1 class="font-bold text-xl tracking-tight text-gray-900">Decap CMS</h1>
+        </div>
+        
+        <nav class="flex-1 overflow-y-auto p-4 space-y-1">
+            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2 px-2">Content</div>
+            <button onclick="switchView('list')" id="nav-posts" class="w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md bg-blue-50 text-blue-700">
+                <i class="fa-solid fa-file-lines w-5"></i> Posts
+            </button>
+            <button onclick="switchView('media')" id="nav-media" class="w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-gray-900">
+                <i class="fa-regular fa-image w-5"></i> Media
+            </button>
+            
+            <div class="mt-8 text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2 px-2">Settings</div>
+            <button class="w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-gray-900">
+                <i class="fa-solid fa-gear w-5"></i> Config
+            </button>
+        </nav>
+
+        <div class="p-4 border-t border-gray-100">
+            <div class="flex items-center gap-3">
+                <img src="https://ui-avatars.com/api/?name=Admin+User&background=0D8ABC&color=fff" alt="User Avatar" class="w-8 h-8 rounded-full">
+                <div class="text-sm">
+                    <p class="font-medium text-gray-900">Admin User</p>
+                    <p class="text-gray-500 text-xs">Local Mode</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- 主内容区域 -->
+    <main class="flex-1 flex flex-col h-full relative">
+        <!-- 顶部工具栏 -->
+        <header class="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-6 shadow-sm">
+            <div class="flex items-center gap-4">
+                <h2 id="page-title" class="text-lg font-semibold text-gray-800">Posts</h2>
+                <span id="item-count" class="px-2 py-0.5 rounded-full bg-gray-100 text-gray-600 text-xs font-medium">0 items</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <button onclick="openEditor()" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md shadow-sm transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    <i class="fa-solid fa-plus"></i> New Post
+                </button>
+            </div>
+        </header>
+
+        <!-- 内容列表视图 -->
+        <div id="view-list" class="flex-1 overflow-y-auto p-6 fade-in">
+            <div class="max-w-5xl mx-auto">
+                <!-- 搜索/filter -->
+                <div class="mb-6 flex gap-4">
+                    <div class="relative flex-1 max-w-md">
+                        <i class="fa-solid fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                        <input type="text" id="search-input" placeholder="Search posts..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-shadow">
+                    </div>
+                </div>
+
+                <!-- 帖子网格 -->
+                <div id="posts-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- 动态生成的内容将在这里 -->
+                </div>
+                
+                <!-- 空状态 -->
+                <div id="empty-state" class="hidden flex flex-col items-center justify-center py-20 text-center">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa-regular fa-folder-open text-2xl text-gray-400"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900">No posts found</h3>
+                    <p class="text-gray-500 mt-1 max-w-sm">Get started by creating a new post using the button above.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 媒体库视图 (简化版) -->
+        <div id="view-media" class="hidden flex-1 overflow-y-auto p-6 fade-in">
+            <div class="max-w-5xl mx-auto">
+                <div class="border-2 border-dashed border-gray-300 rounded-lg p-12 text-center hover:border-blue-500 hover:bg-blue-50 transition-colors cursor-pointer">
+                    <i class="fa-solid fa-cloud-arrow-up text-4xl text-gray-400 mb-4"></i>
+                    <p class="text-lg font-medium text-gray-900">Drag and drop files here</p>
+                    <p class="text-sm text-gray-500 mt-1">or click to upload (Simulation)</p>
+                </div>
+                <div class="mt-8 grid grid-cols-4 gap-4">
+                    <!-- 模拟媒体文件 -->
+                    <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden relative group">
+                        <img src="https://picsum.photos/300/300?random=1" alt="Sample Image 1" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fa-solid fa-trash text-white"></i>
+                        </div>
+                    </div>
+                    <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden relative group">
+                        <img src="https://picsum.photos/300/300?random=2" alt="Sample Image 2" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 编辑器模态框 -->
+    <div id="editor-modal" class="fixed inset-0 z-50 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <!-- 背景遮罩 -->
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity backdrop-blur-sm" onclick="closeEditor()"></div>
+
+        <div class="fixed inset-0 z-10 overflow-y-auto">
+            <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-4xl">
+                    
+                    <!-- 编辑器头部 -->
+                    <div class="bg-white px-4 py-3 border-b border-gray-200 flex justify-between items-center sm:px-6">
+                        <h3 class="text-lg font-medium leading-6 text-gray-900" id="modal-title">Edit Post</h3>
+                        <div class="flex gap-2">
+                            <button onclick="togglePreview()" class="px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-100 rounded-md border border-gray-300">
+                                <i class="fa-regular fa-eye mr-1"></i> Preview
+                            </button>
+                            <button onclick="savePost()" class="px-3 py-1.5 text-sm text-white bg-blue-600 hover:bg-blue-700 rounded-md shadow-sm">
+                                <i class="fa-regular fa-floppy-disk mr-1"></i> Save
+                            </button>
+                            <button onclick="closeEditor()" class="ml-2 text-gray-400 hover:text-gray-500">
+                                <i class="fa-solid fa-xmark text-xl"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 编辑器主体 -->
+                    <div class="px-4 py-5 sm:p-6 bg-gray-50 h-[70vh] overflow-y-auto">
+                        <form id="post-form" class="space-y-6">
+                            <input type="hidden" id="post-id">
+                            
+                            <!-- Title Field -->
+                            <div>
+                                <label for="post-title" class="block text-sm font-medium text-gray-700">Title</label>
+                                <input type="text" name="title" id="post-title" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-lg p-2 border" placeholder="Enter post title">
+                            </div>
+
+                            <!-- Slug & Date Row -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="post-slug" class="block text-sm font-medium text-gray-700">Slug</label>
+                                    <div class="mt-1 flex rounded-md shadow-sm">
+                                        <span class="inline-flex items-center rounded-l-md border border-r-0 border-gray-300 bg-gray-50 px-3 text-gray-500 sm:text-sm">/posts/</span>
+                                        <input type="text" name="slug" id="post-slug" class="block w-full flex-1 rounded-none rounded-r-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2 border" placeholder="url-friendly-name">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="post-date" class="block text-sm font-medium text-gray-700">Publish Date</label>
+                                    <input type="datetime-local" name="date" id="post-date" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2 border">
+                                </div>
+                            </div>
+
+                            <!-- Cover Image -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700">Cover Image</label>
+                                <div class="mt-1 flex justify-center rounded-md border-2 border-dashed border-gray-300 px-6 pt-5 pb-6 hover:border-blue-400 transition-colors cursor-pointer" onclick="document.getElementById('post-image-url').focus()">
+                                    <div class="space-y-1 text-center">
+                                        <i class="fa-regular fa-image text-3xl text-gray-400"></i>
+                                        <div class="flex text-sm text-gray-600 justify-center">
+                                            <span class="relative cursor-pointer rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none">
+                                                <span>Upload a file</span>
+                                                <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                                            </span>
+                                            <p class="pl-1">or drag and drop</p>
+                                        </div>
+                                        <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
+                                    </div>
+                                </div>
+                                <input type="text" id="post-image-url" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-2 border" placeholder="https://example.com/image.jpg" value="https://picsum.photos/800/400?random=3">
+                            </div>
+
+                            <!-- Body (Markdown) -->
+                            <div>
+                                <label for="post-body" class="block text-sm font-medium text-gray-700">Body (Markdown)</label>
+                                <div class="mt-1 border border-gray-300 rounded-md shadow-sm overflow-hidden">
+                                    <textarea id="post-body" name="body" rows="12" class="block w-full rounded-md border-0 focus:ring-0 sm:text-sm font-mono p-4" placeholder="# Write your content here..."></textarea>
+                                </div>
+                                <p class="mt-2 text-sm text-gray-500">Supports standard Markdown syntax.</p>
+                            </div>
+                        </form>
+                        
+                        <!-- Preview Pane (Hidden by default) -->
+                        <div id="preview-pane" class="hidden bg-white p-8 rounded-lg border border-gray-200 shadow-sm min-h-[500px]">
+                            <img id="preview-image" src="" alt="Cover Preview" class="w-full h-64 object-cover rounded-lg mb-6 hidden">
+                            <h1 id="preview-title" class="text-3xl font-bold text-gray-900 mb-4"></h1>
+                            <div class="flex items-center gap-4 text-sm text-gray-500 mb-8 border-b pb-4">
+                                <span><i class="fa-regular fa-calendar mr-1"></i> <span id="preview-date"></span></span>
+                                <span><i class="fa-solid fa-tag mr-1"></i> Blog</span>
+                            </div>
+                            <div id="preview-content" class="markdown-preview prose prose-blue max-w-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-5 right-5 transform translate-y-20 opacity-0 transition-all duration-300 z-50">
+        <div class="bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg flex items-center gap-3">
+            <i class="fa-solid fa-check-circle text-green-400"></i>
+            <span id="toast-message">Operation successful</span>
+        </div>
+    </div>
+
+    <script>
+        // --- 数据管理 (模拟 LocalStorage Backend) ---
+        const STORAGE_KEY = 'decap_cms_demo_posts';
+        
+        // 初始示例数据
+        const initialData = [
+            {
+                id: '1',
+                title: 'Getting Started with Decap CMS',
+                slug: 'getting-started-with-decap-cms',
+                date: '2023-10-15T10:00',
+                image: 'https://picsum.photos/800/400?random=10',
+                body: '# Introduction\n\nDecap CMS is an open source content management system for your Git workflow.\n\n## Features\n\n- Easy installation\n- Works with any static site generator\n- No server required\n\n> "It is the best way to manage content for static sites."'
+            },
+            {
+                id: '2',
+                title: 'Why Static Sites are Great',
+                slug: 'why-static-sites-are-great',
+                date: '2023-11-02T14:30',
+                image: 'https://picsum.photos/800/400?random=11',
+                body: 'Static sites are fast, secure, and easy to deploy.\n\n* **Speed**: No database queries means faster load times.\n* **Security**: Less attack surface since there is no server-side code executing on every request.\n* **Cost**: Hosting static files is often free or very cheap.'
+            }
+        ];
+
+        let posts = [];
+
+        function init() {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored) {
+                posts = JSON.parse(stored);
+            } else {
+                posts = initialData;
+                saveToStorage();
+            }
+            renderPosts();
+            
+            // 监听搜索
+            document.getElementById('search-input').addEventListener('input', (e) => {
+                renderPosts(e.target.value);
+            });
+        }
+
+        function saveToStorage() {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(posts));
+        }
+
+        // --- 视图渲染 ---
+        function renderPosts(filter = '') {
+            const grid = document.getElementById('posts-grid');
+            const emptyState = document.getElementById('empty-state');
+            const countLabel = document.getElementById('item-count');
+            
+            grid.innerHTML = '';
+            
+            const filtered = posts.filter(p => 
+                p.title.toLowerCase().includes(filter.toLowerCase()) || 
+                p.body.toLowerCase().includes(filter.toLowerCase())
+            );
+            
+            countLabel.textContent = `${filtered.length} items`;
+
+            if (filtered.length === 0) {
+                emptyState.classList.remove('hidden');
+            } else {
+                emptyState.classList.add('hidden');
+                filtered.forEach(post => {
+                    const card = document.createElement('div');
+                    card.className = 'bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group flex flex-col';
+                    card.innerHTML = `
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-2 right-2 bg-white/90 backdrop-blur px-2 py-1 rounded text-xs font-bold text-gray-600">
+                                ${new Date(post.date).toLocaleDateString()}
+                            </div>
+                        </div>
+                        <div class="p-5 flex-1 flex flex-col">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2">${post.title}</h3>
+                            <p class="text-gray-500 text-sm line-clamp-3 mb-4 flex-1">${post.body.replace(/[#*>`]/g, '')}</p>
+                            <div class="flex items-center justify-between pt-4 border-t border-gray-100 mt-auto">
+                                <span class="text-xs text-gray-400 font-mono">${post.slug}</span>
+                                <div class="flex gap-2">
+                                    <button onclick="editPost('${post.id}')" class="text-blue-600 hover:text-blue-800 text-sm font-medium">Edit</button>
+                                    <button onclick="deletePost('${post.id}')" class="text-red-500 hover:text-red-700 text-sm"><i class="fa-regular fa-trash-can"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+            }
+        }
+
+        // --- 交互逻辑 ---
+        function switchView(viewName) {
+            const listView = document.getElementById('view-list');
+            const mediaView = document.getElementById('view-media');
+            const navPosts = document.getElementById('nav-posts');
+            const navMedia = document.getElementById('nav-media');
+            const pageTitle = document.getElementById('page-title');
+
+            if (viewName === 'list') {
+                listView.classList.remove('hidden');
+                mediaView.classList.add('hidden');
+                navPosts.classList.add('bg-blue-50', 'text-blue-700');
+                navPosts.classList.remove('text-gray-600', 'hover:bg-gray-50');
+                navMedia.classList.remove('bg-blue-50', 'text-blue-700');
+                navMedia.classList.add('text-gray-600', 'hover:bg-gray-50');
+                pageTitle.textContent = 'Posts';
+            } else {
+                listView.classList.add('hidden');
+                mediaView.classList.remove('hidden');
+                navMedia.classList.add('bg-blue-50', 'text-blue-700');
+                navMedia.classList.remove('text-gray-600', 'hover:bg-gray-50');
+                navPosts.classList.remove('bg-blue-50', 'text-blue-700');
+                navPosts.classList.add('text-gray-600', 'hover:bg-gray-50');
+                pageTitle.textContent = 'Media Library';
+            }
+        }
+
+        // --- 编辑器逻辑 ---
+        let isPreviewMode = false;
+
+        function openEditor(postId = null) {
+            const modal = document.getElementById('editor-modal');
+            const form = document.getElementById('post-form');
+            const titleEl = document.getElementById('modal-title');
+            
+            // Reset form
+            form.reset();
+            document.getElementById('post-id').value = '';
+            document.getElementById('post-date').value = new Date().toISOString().slice(0, 16);
+            document.getElementById('post-image-url').value = 'https://picsum.photos/800/400?random=' + Math.floor(Math.random() * 100);
+            
+            if (postId) {
+                const post = posts.find(p => p.id === postId);
+                if (post) {
+                    titleEl.textContent = 'Edit Post';
+                    document.getElementById('post-id').value = post.id;
+                    document.getElementById('post-title').value = post.title;
+                    document.getElementById('post-slug').value = post.slug;
+                    document.getElementById('post-date').value = post.date;
+                    document.getElementById('post-image-url').value = post.image;
+                    document.getElementById('post-body').value = post.body;
+                }
+            } else {
+                titleEl.textContent = 'New Post';
+                // Generate random slug
+                document.getElementById('post-slug').value = 'new-post-' + Math.floor(Math.random() * 1000);
+            }
+            
+            // Hide preview if open
+            document.getElementById('preview-pane').classList.add('hidden');
+            document.getElementById('post-form').classList.remove('hidden');
+            isPreviewMode = false;
+
+            modal.classList.remove('hidden');
+        }
+
+        function closeEditor() {
+            document.getElementById('editor-modal').classList.add('hidden');
+        }
+
+        function togglePreview() {
+            const form = document.getElementById('post-form');
+            const preview = document.getElementById('preview-pane');
+            const btnText = event.currentTarget;
+            
+            if (isPreviewMode) {
+                // Switch to Edit
+                preview.classList.add('hidden');
+                form.classList.remove('hidden');
+                btnText.innerHTML = '<i class="fa-regular fa-eye mr-1"></i> Preview';
+                isPreviewMode = false;
+            } else {
+                // Switch to Preview
+                // Populate preview data
+                document.getElementById('preview-title').textContent = document.getElementById('post-title').value || 'Untitled';
+                document.getElementById('preview-date').textContent = new Date(document.getElementById('post-date').value).toLocaleDateString();
+                
+                const imgUrl = document.getElementById('post-image-url').value;
+                const imgEl = document.getElementById('preview-image');
+                if(imgUrl) {
+                    imgEl.src = imgUrl;
+                    imgEl.classList.remove('hidden');
+                } else {
+                    imgEl.classList.add('hidden');
+                }
+
+                // Simple Markdown parsing simulation
+                let body = document.getElementById('post-body').value;
+                body = body
+                    .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+                    .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+                    .replace(/\*\*(.*)\*\*/gim, '<b>$1</b>')
+                    .replace(/\*(.*)\*/gim, '<i>$1</i>')
+                    .replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
+                    .replace(/\n/gim, '<br>');
+                
+                document.getElementById('preview-content').innerHTML = body;
+
+                form.classList.add('hidden');
+                preview.classList.remove('hidden');
+                btnText.innerHTML = '<i class="fa-solid fa-pen-to-square mr-1"></i> Edit';
+                isPreviewMode = true;
+            }
+        }
+
+        function savePost() {
+            const id = document.getElementById('post-id').value;
+            const title = document.getElementById('post-title').value;
+            const slug = document.getElementById('post-slug').value;
+            const date = document.getElementById('post-date').value;
+            const image = document.getElementById('post-image-url').value;
+            const body = document.getElementById('post-body').value;
+
+            if (!title) {
+                showToast('Title is required', 'error');
+                return;
+            }
+
+            if (id) {
+                // Update existing
+                const index = posts.findIndex(p => p.id === id);
+                if (index !== -1) {
+                    posts[index] = { ...posts[index], title, slug, date, image, body };
+                    showToast('Post updated successfully');
+                }
+            } else {
+                // Create new
+                const newPost = {
+                    id: Date.now().toString(),
+                    title,
+                    slug,
+                    date,
+                    image,
+                    body
+                };
+                posts.unshift(newPost);
+                showToast('New post created');
+            }
+
+            saveToStorage();
+            renderPosts();
+            closeEditor();
+        }
+
+        function editPost(id) {
+            openEditor(id);
+        }
+
+        function deletePost(id) {
+            if(confirm('Are you sure you want to delete this post?')) {
+                posts = posts.filter(p => p.id !== id);
+                saveToStorage();
+                renderPosts();
+                showToast('Post deleted');
+            }
+        }
+
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            const msgEl = document.getElementById('toast-message');
+            const icon = toast.querySelector('i');
+            
+            msgEl.textContent = message;
+            
+            if (type === 'error') {
+                icon.className = 'fa-solid fa-circle-exclamation text-red-400';
+            } else {
+                icon.className = 'fa-solid fa-check-circle text-green-400';
+            }
+
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        // Auto-generate slug from title
+        document.getElementById('post-title').addEventListener('input', function(e) {
+            const slugInput = document.getElementById('post-slug');
+            // Only auto-generate if it looks like a default slug or is empty
+            if (slugInput.value.startsWith('new-post-') || slugInput.value === '') {
+                slugInput.value = e.target.value.toLowerCase().replace(/[^\w ]+/g,'').replace(/ +/g,'-');
+            }
+        });
+
+        // Initialize
+        init();
+    </script>
+</body>
+</html>

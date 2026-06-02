@@ -1,0 +1,20 @@
+backend:
+  name: github # 使用 Netlify Identity 或类似服务时常用
+  repo: thriken/myblog
+  branch: main      # 要提交的分支
+  auth_type: implicit 
+  app_id: Ov23liobiOdCU8FAkjtn
+  
+media_folder: "static/images" # 媒体文件在仓库中的存储路径
+public_folder: "/images"      # 网站访问媒体文件的路径
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "content/posts"   # 内容文件存储目录
+    create: true              # 允许创建新文件
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
