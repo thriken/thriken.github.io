@@ -1,12 +1,11 @@
 backend:
-  name: github # 使用 Netlify Identity 或类似服务时常用
+  name: github 
   repo: thriken/thriken.github.io
-  branch: master      # 要提交的分支
-  auth_type: implicit 
-  client_id: Ov23liobiOdCU8FAkjtn
+  branch: master      
+
   
-media_folder: "static/images" # 媒体文件在仓库中的存储路径
-public_folder: "/images"      # 网站访问媒体文件的路径
+media_folder: "static/images" 
+public_folder: "/images"      
 
 collections:
   - name: "posts"
