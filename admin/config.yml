@@ -3,7 +3,7 @@ backend:
   repo: thriken/thriken.github.io
   branch: master      # 要提交的分支
   auth_type: implicit 
-  app_id: Ov23liobiOdCU8FAkjtn
+  client_id: Ov23liobiOdCU8FAkjtn
   
 media_folder: "static/images" # 媒体文件在仓库中的存储路径
 public_folder: "/images"      # 网站访问媒体文件的路径
