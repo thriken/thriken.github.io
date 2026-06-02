@@ -1,7 +1,7 @@
 backend:
   name: github # 使用 Netlify Identity 或类似服务时常用
   repo: thriken/thriken.github.io
-  branch: main      # 要提交的分支
+  branch: master      # 要提交的分支
   auth_type: implicit 
   app_id: Ov23liobiOdCU8FAkjtn
   
