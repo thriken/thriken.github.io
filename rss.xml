@@ -1,462 +1,1848 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-<title>ThingamaBlog</title>
-<link>https://thriken.github.io/index.html</link>
-<description>ThingamaBlog</description>
-<language>zh-CN</language>
-<copyright>Copyright 2018</copyright>
-<lastBuildDate>Sun, 17 Jun 2018 12:18:20 +0800</lastBuildDate>
-<pubDate>Sun, 17 Jun 2018 12:18:20 +0800</pubDate>
-<generator>http://wangxinblog.cn</generator>
-<docs>http://www.wangxinblog.cn/rss.xml</docs>
+	<title>ThingamaBlog</title>
+	<link>https://thriken.github.io/</link>
+	<description>ThingamaBlog</description>
+	<language>zh-CN</language>
+	<pubDate>Wed, 22 Jul 2026 18:29:37 +0800</pubDate>
+	<generator>py2htmlblog</generator>
+	<atom:link href="https://thriken.github.io/rss.xml" rel="self" type="application/rss+xml" />
+	
+	<item>
+		<title>py2htmlblog：把 Markdown 变成博客，就这么简单</title>
+		<link>https://thriken.github.io/archives/2026/07/entry_12.html</link>
+		<description>py2htmlblog：把 Markdown 变成博客，就这么简单
 
-<item>
-<title>域名和空间</title>
-<description>&lt;p&gt;
-          &amp;#20960;&amp;#20010;&amp;#22495;&amp;#21517;&amp;#21644;&amp;#31354;&amp;#38388;&amp;#35201;&amp;#21040;&amp;#26399;&amp;#65292;&amp;#30495;&amp;#26159;&amp;#20260;&amp;#33041;&amp;#31563;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-          &amp;#22269;&amp;#20869;&amp;#19981;&amp;#20415;&amp;#23452;&amp;#65292;&amp;#22269;&amp;#22806;&amp;#36895;&amp;#24230;&amp;#24555;&amp;#21448;&amp;#31283;&amp;#23450;&amp;#30340;&amp;#20027;&amp;#26426;&amp;#20063;&amp;#19981;&amp;#22909;&amp;#25214;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#27714;&amp;#22823;&amp;#23478;&amp;#25512;&amp;#33616;&amp;#24265;&amp;#20215;&amp;#31283;&amp;#23450;&amp;#23567;&amp;#34394;&amp;#25311;&amp;#20027;&amp;#26426;&amp;#65292;100M+20M-MYSQL&amp;#23601;&amp;#22815;&amp;#29992;&amp;#20102;&amp;#12290;
-    &lt;/p&gt;</description>
-<link>https://thriken.github.io/archives/2014/03/entry_11.html</link>
-<guid>https://thriken.github.io/archives/2014/03/entry_11.html</guid>
+这是什么
 
-<category>Log</category>
+py2htmlblog 是一个 Python 写的静态博客生成器。给它 Markdown 文章、分类信息和一个 HTML 模板，它就能生成一个完整的静态网站，丢到任何地方都能跑——GitHub Pages、虚拟主机、对象存储，甚至 U 盘。
 
-<pubDate>Sat, 15 Mar 2014 09:15:08 +0800</pubDate>
-</item>
+它模仿了老牌博客工具 ThingamaBlog 的设计理念（模板 + 数据...</description>
+		<content:encoded><![CDATA[<h1>py2htmlblog：把 Markdown 变成博客，就这么简单</h1>
 
-<item>
-<title>电视和电脑的区别</title>
-<description>&lt;p&gt;
-      &amp;#30005;&amp;#35270;&amp;#21644;&amp;#30005;&amp;#33041;&amp;#30340;&amp;#21306;&amp;#21035;&amp;#65311;&amp;#65311;&amp;#65311;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#24320;&amp;#30005;&amp;#33041;&amp;#65306;&amp;#23601;&amp;#35273;&amp;#24471;&amp;#31038;&amp;#20250;&amp;#40657;&amp;#26263;&amp;#65292;&amp;#23448;&amp;#21592;&amp;#33104;&amp;#36133;&amp;#65292;&amp;#24694;&amp;#21183;&amp;#21147;&amp;#27178;&amp;#34892;&amp;#65292;&amp;#27665;&amp;#19981;&amp;#32842;&amp;#29983;&amp;#65292;&amp;#20223;&amp;#20315;&amp;#39532;&amp;#19978;&amp;#23601;&amp;#35201;&amp;#28781;&amp;#20129;&amp;#20102;&amp;#65311;&amp;#65311;&amp;#65311;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#24320;&amp;#30005;&amp;#35270;&amp;#65306;&amp;#23601;&amp;#35273;&amp;#24471;&amp;#31038;&amp;#20250;&amp;#21644;&amp;#35856;&amp;#65292;&amp;#20154;&amp;#27665;&amp;#24184;&amp;#31119;&amp;#65292;&amp;#36733;&amp;#27468;&amp;#36733;&amp;#33310;&amp;#65292;&amp;#22825;&amp;#19979;&amp;#22826;&amp;#24179;&amp;#65292;&amp;#22269;&amp;#27888;&amp;#27665;&amp;#23433;&amp;#65292;&amp;#19968;&amp;#30334;&amp;#24180;&amp;#37117;&amp;#19981;&amp;#20250;&amp;#20986;&amp;#20107;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#30005;&amp;#33041;&amp;#26159;&amp;#29983;&amp;#27963;&amp;#29031;&amp;#65292;&amp;#30005;&amp;#35270;&amp;#26159;&amp;#23130;&amp;#32433;&amp;#29031;&amp;#12290;
-    &lt;/p&gt;</description>
-<link>https://thriken.github.io/archives/2014/02/entry_10.html</link>
-<guid>https://thriken.github.io/archives/2014/02/entry_10.html</guid>
+<h2>这是什么</h2>
 
-<category>Log</category>
+<p>py2htmlblog 是一个 Python 写的静态博客生成器。给它 Markdown 文章、分类信息和一个 HTML 模板，它就能生成一个完整的静态网站，丢到任何地方都能跑——GitHub Pages、虚拟主机、对象存储，甚至 U 盘。</p>
 
-<pubDate>Thu, 20 Feb 2014 13:17:44 +0800</pubDate>
-</item>
+<p>它模仿了老牌博客工具 <strong>ThingamaBlog</strong> 的设计理念（模板 + 数据 = 静态页面），但用 Python 重写，去掉了对 Java 的依赖，并加入了现代博客需要的所有功能。</p>
 
-<item>
-<title>2012经典的一段话</title>
-<description>&lt;p&gt;
-      &amp;#39640;&amp;#26195;&amp;#26494;&amp;#20986;&amp;#29425;&amp;#21518;&amp;#21457;&amp;#24494;&amp;#21338;&amp;#31216;&amp;#65306;&amp;#8220;11&amp;#26376;8&amp;#26085;&amp;#65292;&amp;#31435;&amp;#20908;&amp;#65292;&amp;#26399;&amp;#28385;&amp;#65292;&amp;#24402;&amp;#12290;184&amp;#22825;&amp;#65292;&amp;#26368;&amp;#38271;&amp;#30340;&amp;#21322;&amp;#24180;&amp;#12290;&amp;#22823;&amp;#23478;&amp;#37117;&amp;#22909;&amp;#21527;&amp;#65311;&amp;#22806;&amp;#38754;&amp;#36425;&amp;#36302;&amp;#21527;&amp;#65311;&amp;#8221;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#22238;&amp;#22797;&amp;#65306;&amp;#26195;&amp;#26494;&amp;#32769;&amp;#24072;&amp;#65292;&amp;#36825;&amp;#21322;&amp;#24180;&amp;#8212;&amp;#8212;&amp;#25289;&amp;#30331;&amp;#34987;&amp;#27609;&amp;#20102;&amp;#65307;&amp;#21345;&amp;#25166;&amp;#33778;&amp;#20063;&amp;#27515;&amp;#20102;&amp;#65307;&amp;#20052;&amp;#24110;&amp;#20027;&amp;#21435;&amp;#19990;&amp;#20102;&amp;#27809;&amp;#26377;&amp;#29233;&amp;#30127;5&amp;#65307;&amp;#20964;&amp;#22992;&amp;#31227;&amp;#27665;&amp;#20102;;&amp;#33433;&amp;#33993;85&amp;#26020;&amp;#20102;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#23792;&amp;#33437;&amp;#36824;&amp;#26159;&amp;#31163;&amp;#20102;&amp;#65292;&amp;#20896;&amp;#24076;&amp;#32769;&amp;#24072;&amp;#22312;&amp;#20934;&amp;#22791;&amp;#26032;&amp;#20316;&amp;#21697;&amp;#65307;&amp;#24191;&amp;#30005;&amp;#38480;&amp;#23089;&amp;#65292;&amp;#28504;&amp;#24065;&amp;#21457;&amp;#34892;&amp;#20102;&amp;#65307;&amp;#22478;&amp;#31649;&amp;#20381;&amp;#26087;&amp;#23041;&amp;#27494;&amp;#65292;&amp;#22269;&amp;#36275;&amp;#36824;&amp;#26159;&amp;#32769;&amp;#26679;&amp;#65307;&amp;#32769;&amp;#20154;&amp;#36824;&amp;#26159;&amp;#19981;&amp;#25954;&amp;#25206;&amp;#65292;&amp;#21160;&amp;#36710;&amp;#30340;&amp;#20107;&amp;#20063;&amp;#27809;&amp;#22238;&amp;#22797;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#24744;&amp;#24819;&amp;#20080;&amp;#30340;&amp;#36798;&amp;#33452;&amp;#22855;&amp;#26159;&amp;#20551;&amp;#36135;&amp;#65292;&amp;#24744;&amp;#21917;&amp;#36807;&amp;#30340;&amp;#25289;&amp;#33778;&amp;#26159;&amp;#22312;&amp;#36718;&amp;#33337;&amp;#28748;&amp;#30340;&amp;#65292;&amp;#25105;&amp;#20204;&amp;#37117;&amp;#36824;&amp;#22909;&amp;#65292;&amp;#23601;&amp;#26159;&amp;#27809;&amp;#33337;&amp;#31080;&amp;#12290;
-    &lt;/p&gt;</description>
-<link>https://thriken.github.io/archives/2013/07/entry_9.html</link>
-<guid>https://thriken.github.io/archives/2013/07/entry_9.html</guid>
+<h2>能做什么</h2>
 
-<category>Log</category>
+<ul>
+<li><strong>写文章</strong>：用 Markdown 写，带 frontmatter 元数据。格式简洁，任何编辑器都能打开</li>
+<li><strong>自动构建</strong>：一键生成完整的静态站点，首页、归档、分类、文章页、RSS、sitemap 全搞定</li>
+<li><strong>多套模板</strong>：内置 19 套主题模板，包括从 WordPress 移植的 iNove 经典主题和 17 套 ThingamaBlog 原装模板</li>
+<li><strong>URL 兼容</strong>：生成的 URL 与 ThingamaBlog 完全一致（<code>archives/2014/03/entry_1.html</code>），迁移老博客不会丢搜索引擎索引</li>
+<li><strong>多种发布方式</strong>：FTP、SFTP、Git 推送，一条命令部署到任何地方</li>
+<li><strong>GUI 界面</strong>：PyQt 写的桌面编辑器，实时 Markdown 预览，不用碰命令行也能写博客</li>
+<li><strong>ZIP 模板包</strong>：模板可以打包成 ZIP，系统自动加载，方便分发和分享</li>
+</ul>
+<h2>为什么又造一个轮子</h2>
 
-<pubDate>Thu, 04 Jul 2013 00:10:50 +0800</pubDate>
-</item>
+<p>ThingamaBlog 是个很好的工具，但它依赖 Java 运行环境，模板语法也相对封闭。当博客从 Windows 迁移到 GitHub Pages 后，每次更新都要手动编辑 HTML，很不方便。</p>
 
-<item>
-<title>吐槽两会</title>
-<description>&lt;p&gt;
-      &amp;#29992;&amp;#22902;&amp;#31881;&amp;#28781;&amp;#25481;00&amp;#21518;&amp;#65292;&amp;#29992;&amp;#32771;&amp;#35797;&amp;#28781;&amp;#25481;90&amp;#21518;&amp;#65292;&amp;#29992;&amp;#25151;&amp;#20215;&amp;#28781;&amp;#25481;80&amp;#21518;&amp;#65292;&amp;#29992;&amp;#22833;&amp;#19994;&amp;#28781;&amp;#25481;70&amp;#21518;&amp;#65292;&amp;#29992;&amp;#22478;&amp;#31649;&amp;#28781;&amp;#25481;60&amp;#21518;&amp;#65292;&amp;#29992;&amp;#19979;&amp;#23703;&amp;#28781;&amp;#25481;50&amp;#21518;&amp;#65292;&amp;#29992;&amp;#25286;&amp;#36801;&amp;#28781;&amp;#25481;40&amp;#21518;&amp;#65292;&amp;#29992;&amp;#21307;&amp;#25913;&amp;#28781;&amp;#25481;30&amp;#21518;&amp;#65292;&amp;#8230;&amp;#8230;&amp;#26368;&amp;#21518;&amp;#65292;&amp;#27963;&amp;#30528;&amp;#19988;&amp;#27963;&amp;#24471;&amp;#24456;&amp;#22909;&amp;#30340;&amp;#20154;&amp;#37117;&amp;#21435;&amp;#24320;&amp;#20004;&amp;#20250;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#26377;&amp;#20154;&amp;#38382;&amp;#65306;&amp;#8220;&amp;#21861;&amp;#26159;&amp;#20004;&amp;#20250;&amp;#21602;&amp;#8221;&amp;#65311;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#20892;&amp;#27665;&amp;#20195;&amp;#34920;&amp;#31572;&amp;#65306;&amp;#20250;&amp;#20859;&amp;#29482;&amp;#12289;&amp;#20250;&amp;#20132;&amp;#37197;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#24037;&amp;#20154;&amp;#20195;&amp;#34920;&amp;#31572;&amp;#65306;&amp;#20250;&amp;#25379;&amp;#38065;&amp;#12289;&amp;#20250;&amp;#28040;&amp;#36153;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#27665;&amp;#24037;&amp;#20195;&amp;#34920;&amp;#31572;&amp;#65306;&amp;#20250;&amp;#35752;&amp;#34218;&amp;#12289;&amp;#20250;&amp;#19979;&amp;#36330;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#20445;&amp;#22982;&amp;#20195;&amp;#34920;&amp;#31572;&amp;#65306;&amp;#20250;&amp;#25554;&amp;#36275;&amp;#12289;&amp;#20250;&amp;#21472;&amp;#34987;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#33402;&amp;#20154;&amp;#20195;&amp;#34920;&amp;#31572;&amp;#65306;&amp;#20250;&amp;#28818;&amp;#20316;&amp;#12289;&amp;#20250;&amp;#38506;&amp;#30561;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#21830;&amp;#20154;&amp;#20195;&amp;#34920;&amp;#31572;&amp;#65306;&amp;#20250;&amp;#36186;&amp;#38065;&amp;#12289;&amp;#20250;&amp;#36867;&amp;#31246;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#23448;&amp;#21592;&amp;#20195;&amp;#34920;&amp;#31572;&amp;#65306;&amp;#20250;&amp;#25746;&amp;#35854;&amp;#12289;&amp;#20250;&amp;#21463;&amp;#36159;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#32929;&amp;#27665;&amp;#20195;&amp;#34920;&amp;#31572;&amp;#65306;&amp;#20250;&amp;#21106;&amp;#32905;&amp;#65292;&amp;#20250;&amp;#27969;&amp;#27882;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-      
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#38761;&amp;#21629;&amp;#24037;&amp;#20316;&amp;#33510;&amp;#21834;&amp;#65306;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#21453;&amp;#24212;&amp;#24930;&amp;#30340;&amp;#20250;&amp;#34987;&amp;#29609;&amp;#27515;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#33021;&amp;#21147;&amp;#24046;&amp;#30340;&amp;#20250;&amp;#34987;&amp;#38386;&amp;#27515;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#32966;&amp;#23376;&amp;#23567;&amp;#30340;&amp;#20250;&amp;#34987;&amp;#21523;&amp;#27515;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#37202;&amp;#37327;&amp;#23567;&amp;#30340;&amp;#20250;&amp;#34987;&amp;#28748;&amp;#27515;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#36523;&amp;#20307;&amp;#24046;&amp;#30340;&amp;#20250;&amp;#34987;&amp;#32047;&amp;#27515;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#25152;&amp;#20197;&amp;#21568;&amp;#65306;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#20154;&amp;#19981;&amp;#33021;&amp;#22826;&amp;#25964;&amp;#19994;&amp;#20102;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#33891;&amp;#23384;&amp;#29790;&amp;#25343;&amp;#24471;&amp;#22826;&amp;#31283;&amp;#20102;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#21016;&amp;#32993;&amp;#20848;&amp;#22068;&amp;#24052;&amp;#22826;&amp;#32039;&amp;#20102;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#37041;&amp;#23569;&amp;#20113;&amp;#36276;&amp;#24471;&amp;#22826;&amp;#27515;&amp;#20102;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#40644;&amp;#32487;&amp;#20809;&amp;#25169;&amp;#24471;&amp;#22826;&amp;#20934;&amp;#20102;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#24352;&amp;#24605;&amp;#24503;&amp;#36305;&amp;#24471;&amp;#22826;&amp;#26202;&amp;#20102;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#30333;&amp;#27714;&amp;#24681;&amp;#20250;&amp;#24471;&amp;#22826;&amp;#22810;&amp;#20102;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-      
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#25945;&amp;#35757;&amp;#21568;&amp;#65292;&amp;#24515;&amp;#24577;&amp;#22909;&amp;#25165;&amp;#26159;&amp;#26368;&amp;#37325;&amp;#35201;&amp;#30340;&amp;#65281;&amp;#19981;&amp;#28982;&amp;#20154;&amp;#22312;&amp;#22825;&amp;#22530;&amp;#65292;&amp;#38065;&amp;#22312;&amp;#38134;&amp;#34892;&amp;#12290;
-    &lt;/p&gt;</description>
-<link>https://thriken.github.io/archives/2013/07/entry_8.html</link>
-<guid>https://thriken.github.io/archives/2013/07/entry_8.html</guid>
+<p>py2htmlblog 的目标就是：<strong>保留 ThingamaBlog 的优点（模板分离、静态生成、URL 稳定），同时用 Python 让它更轻便、更开放、更现代化</strong>。</p>
 
-<category>Log</category>
+<h2>技术栈</h2>
 
-<pubDate>Thu, 04 Jul 2013 00:09:44 +0800</pubDate>
-</item>
+<table>
+<thead><tr>
+<th>组件</th>
+<th>技术</th>
+</tr></thead><tbody>
+<tr>
+<td>语言</td>
+<td>Python 3</td>
+</tr>
+<tr>
+<td>模板引擎</td>
+<td>自研（类似 Jinja2 语法）</td>
+</tr>
+<tr>
+<td>Markdown</td>
+<td>自研解析器（支持中文）</td>
+</tr>
+<tr>
+<td>GUI</td>
+<td>PyQt5</td>
+</tr>
+<tr>
+<td>部署</td>
+<td>FTP / SFTP / Git</td>
+</tr>
+</tbody></table>
 
-<item>
-<title>中国的现状(经典)</title>
-<description>&lt;p&gt;
-      
-    &lt;/p&gt;
-    &lt;p&gt;
-      1&amp;#12289;ATM&amp;#21462;&amp;#20986;&amp;#20551;&amp;#38065;---&amp;gt;&amp;#38134;&amp;#34892;&amp;#26080;&amp;#36131;
-    &lt;/p&gt;
-    &lt;p&gt;
-      2&amp;#12289;&amp;#32593;&amp;#19978;&amp;#38134;&amp;#34892;&amp;#34987;&amp;#30423;---&amp;gt;&amp;#20648;&amp;#25143;&amp;#36131;&amp;#20219;
-    &lt;/p&gt;
-    &lt;p&gt;
-      3&amp;#12289;&amp;#38134;&amp;#34892;&amp;#22810;&amp;#32473;&amp;#20102;&amp;#38065;---&amp;gt;&amp;#20648;&amp;#25143;&amp;#20041;&amp;#21153;&amp;#24402;&amp;#36824;
-    &lt;/p&gt;
-    &lt;p&gt;
-      4&amp;#12289;&amp;#38134;&amp;#34892;&amp;#23569;&amp;#32473;&amp;#20102;&amp;#38065;---&amp;gt;&amp;#31163;&amp;#24320;&amp;#26588;&amp;#21488;&amp;#27010;&amp;#19981;&amp;#36127;&amp;#36131;
-    &lt;/p&gt;
-    &lt;p&gt;
-      5&amp;#12289;ATM&amp;#26426;&amp;#20986;&amp;#29616;&amp;#25925;&amp;#38556;&amp;#23569;&amp;#32473;&amp;#38065;---&amp;gt;&amp;#29992;&amp;#25143;&amp;#36127;&amp;#36131;
-    &lt;/p&gt;
-    &lt;p&gt;
-      6&amp;#12289;ATM&amp;#26426;&amp;#20986;&amp;#29616;&amp;#25925;&amp;#38556;&amp;#22810;&amp;#32473;&amp;#38065;---&amp;gt;&amp;#29992;&amp;#25143;&amp;#30423;&amp;#31363;
-    &lt;/p&gt;
-    &lt;p&gt;
-      7&amp;#12289;&amp;#24191;&amp;#19996;&amp;#24320;&amp;#24179;&amp;#38134;&amp;#34892;&amp;#34892;&amp;#38271;&amp;#36138;&amp;#27745;4&amp;#20159;---&amp;gt;&amp;#21028;2&amp;#24180;
-    &lt;/p&gt;
-    &lt;p&gt;
-      8&amp;#12289;ATM&amp;#22810;&amp;#21520;7&amp;#19975;&amp;#32473;&amp;#32769;&amp;#30334;&amp;#22995;&amp;#35768;&amp;#38662;---&amp;gt;&amp;#21028;&amp;#26080;&amp;#26399;
-    &lt;/p&gt;
-    &lt;p&gt;
-      
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#20013;&amp;#22269;&amp;#29616;&amp;#29366;&amp;#65306;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#29983;&amp;#19981;&amp;#36215;&amp;#65292;&amp;#21078;&amp;#33145;&amp;#19968;&amp;#20992;&amp;#20116;&amp;#21315;&amp;#36215;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#35835;&amp;#19981;&amp;#36215;&amp;#65292;&amp;#36873;&amp;#20010;&amp;#23398;&amp;#26657;&amp;#19977;&amp;#19975;&amp;#36215;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#20303;&amp;#19981;&amp;#36215;&amp;#65292;&amp;#20108;&amp;#19975;&amp;#22810;&amp;#20803;&amp;#19968;&amp;#24179;&amp;#31859;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#32769;&amp;#23110;&amp;#19981;&amp;#26159;&amp;#23094;&amp;#19981;&amp;#36215;&amp;#65292;&amp;#27809;&amp;#25151;&amp;#27809;&amp;#36710;&amp;#35841;&amp;#23233;&amp;#20320;&amp;#65311;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#20859;&amp;#19981;&amp;#36215;&amp;#65292;&amp;#29238;&amp;#27597;&amp;#19979;&amp;#23703;&amp;#20799;&amp;#19979;&amp;#22320;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#30149;&amp;#19981;&amp;#36215;&amp;#65292;&amp;#33647;&amp;#36153;&amp;#21033;&amp;#28070;&amp;#21313;&amp;#20493;&amp;#36215;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#27963;&amp;#19981;&amp;#36215;&amp;#65292;&amp;#19968;&amp;#26376;&amp;#36763;&amp;#21171;&amp;#19968;&amp;#21315;&amp;#20960;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#27515;&amp;#19981;&amp;#36215;&amp;#65292;&amp;#28779;&amp;#21270;&amp;#19979;&amp;#33900;&amp;#19977;&amp;#19975;&amp;#20960;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#24635;&amp;#32467;&amp;#65288;&amp;#20843;&amp;#20010;&amp;#22823;&amp;#23383;&amp;#65289;&amp;#65306;&amp;#27714;&amp;#29983;&amp;#19981;&amp;#24471;&amp;#65292;&amp;#27714;&amp;#27515;&amp;#19981;&amp;#33021;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-      
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#25945;&amp;#32946;&amp;#65306;&amp;#24076;&amp;#26395;&amp;#36827;&amp;#21435;&amp;#65292;&amp;#32477;&amp;#26395;&amp;#20986;&amp;#26469;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#25151;&amp;#20135;&amp;#65306;&amp;#34583;&amp;#23621;&amp;#36827;&amp;#21435;&amp;#65292;&amp;#25151;&amp;#22900;&amp;#20986;&amp;#26469;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#28436;&amp;#33402;&amp;#65306;&amp;#29577;&amp;#22899;&amp;#36827;&amp;#21435;&amp;#65292;&amp;#23567;&amp;#22992;&amp;#20986;&amp;#26469;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#20449;&amp;#35775;&amp;#65306;&amp;#31398;&amp;#23077;&amp;#36827;&amp;#21435;&amp;#65292;&amp;#30127;&amp;#23376;&amp;#20986;&amp;#26469;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#23448;&amp;#22330;&amp;#65306;&amp;#28023;&amp;#29790;&amp;#36827;&amp;#21435;&amp;#65292;&amp;#21644;&amp;#32453;&amp;#20986;&amp;#26469;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#29028;&amp;#31377;&amp;#65306;&amp;#36466;&amp;#30528;&amp;#36827;&amp;#21435;&amp;#65292;&amp;#36538;&amp;#30528;&amp;#20986;&amp;#26469;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#22823;&amp;#23398;&amp;#65306;&amp;#26657;&amp;#33457;&amp;#36827;&amp;#21435;&amp;#65292;&amp;#27531;&amp;#33457;&amp;#20986;&amp;#26469;&amp;#65281;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#32929;&amp;#24066;&amp;#65306;&amp;#26472;&amp;#30334;&amp;#19975;&amp;#36827;&amp;#21435;&amp;#65292;&amp;#26472;&amp;#30333;&amp;#21171;&amp;#20986;&amp;#26469;&amp;#65307;&amp;#23453;&amp;#39532;&amp;#36827;&amp;#21435;&amp;#65292;&amp;#33258;&amp;#34892;&amp;#36710;&amp;#20986;&amp;#26469;&amp;#65307;&amp;#35199;&amp;#35013;&amp;#38761;&amp;#23653;&amp;#36827;&amp;#21435;&amp;#65292;&amp;#19977;&amp;#35282;&amp;#35044;&amp;#20986;&amp;#26469;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#32769;&amp;#30334;&amp;#22995;&amp;#22312;&amp;#24605;&amp;#32771;&amp;#65292;&amp;#20026;&amp;#21861;&amp;#29609;&amp;#19981;&amp;#36807;&amp;#25919;&amp;#24220;&amp;#21602;&amp;#65311;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#21407;&amp;#22240;&amp;#22914;&amp;#19979;&amp;#65306;
-    &lt;/p&gt;
-    &lt;p&gt;
-      1&amp;#12289;&amp;#20320;&amp;#21644;&amp;#20182;&amp;#35762;&amp;#36947;&amp;#29702;&amp;#65292;&amp;#20182;&amp;#21644;&amp;#20320;&amp;#32781;&amp;#27969;&amp;#27667;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      2&amp;#12289;&amp;#20320;&amp;#21644;&amp;#20182;&amp;#32781;&amp;#27969;&amp;#27667;&amp;#65292;&amp;#20182;&amp;#21644;&amp;#20320;&amp;#35762;&amp;#27861;&amp;#21046;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      3&amp;#12289;&amp;#20320;&amp;#21644;&amp;#20182;&amp;#35762;&amp;#27861;&amp;#21046;&amp;#65292;&amp;#20182;&amp;#21644;&amp;#20320;&amp;#35762;&amp;#25919;&amp;#27835;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      4&amp;#12289;&amp;#20320;&amp;#21644;&amp;#20182;&amp;#35762;&amp;#25919;&amp;#27835;&amp;#65292;&amp;#20182;&amp;#21644;&amp;#20320;&amp;#35762;&amp;#22269;&amp;#24773;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      5&amp;#12289;&amp;#20320;&amp;#21644;&amp;#20182;&amp;#35762;&amp;#22269;&amp;#24773;&amp;#65292;&amp;#20182;&amp;#21644;&amp;#20320;&amp;#35762;&amp;#25509;&amp;#36712;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      6&amp;#12289;&amp;#20320;&amp;#21644;&amp;#20182;&amp;#35762;&amp;#25509;&amp;#36712;&amp;#65292;&amp;#20182;&amp;#21644;&amp;#20320;&amp;#35762;&amp;#25991;&amp;#21270;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      7&amp;#12289;&amp;#20320;&amp;#21644;&amp;#20182;&amp;#35762;&amp;#25991;&amp;#21270;&amp;#65292;&amp;#20182;&amp;#21644;&amp;#20320;&amp;#35762;&amp;#23380;&amp;#23376;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      8&amp;#12289;&amp;#20320;&amp;#21644;&amp;#20182;&amp;#35762;&amp;#23380;&amp;#23376;&amp;#65292;&amp;#20182;&amp;#21644;&amp;#20320;&amp;#35762;&amp;#32769;&amp;#23376;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      9&amp;#12289;&amp;#20320;&amp;#21644;&amp;#20182;&amp;#35762;&amp;#32769;&amp;#23376;&amp;#65292;&amp;#20182;&amp;#32473;&amp;#20320;&amp;#35013;&amp;#23385;&amp;#23376;&amp;#65281;
-    &lt;/p&gt;
-    &lt;p&gt;
-      
-    &lt;/p&gt;</description>
-<link>https://thriken.github.io/archives/2013/07/entry_7.html</link>
-<guid>https://thriken.github.io/archives/2013/07/entry_7.html</guid>
+<h2>项目结构一览</h2>
 
-<category>Log</category>
+<pre><code>python-main/
+├── data/                  # 所有数据
+│   ├── info.json          # 站点配置
+│   ├── category.json      # 分类列表
+│   ├── links.json         # 友链列表
+│   └── post/              # 文章（Markdown + frontmatter）
+├── templates/             # 19 套主题模板
+│   ├── default/           # 默认主题
+│   ├── inove/             # iNove 1.2.3（WordPress 移植）
+│   └── ...                # 17 套 ThingamaBlog 原装模板
+├── mdblog/                # 待发布文章目录
+├── wwwroot/               # 生成后的静态站点（直接部署）
+├── main.py                # 命令行入口
+├── publish.py             # 站点生成器
+├── deploy.py              # 发布模块（FTP/SFTP/Git）
+├── convert_thingama_templates.py  # 模板转换工具
+└── gui.py                 # PyQt 桌面编辑器</code></pre>
 
-<pubDate>Thu, 04 Jul 2013 00:08:03 +0800</pubDate>
-</item>
+<h2>和同类工具的区别</h2>
 
-<item>
-<title>高才生给主席、总理的信：</title>
-<description>&lt;p&gt;
-      &amp;#20027;&amp;#24109;&amp;#12289;&amp;#24635;&amp;#29702;&amp;#65306;&amp;#20320;&amp;#20204;&amp;#22909;&amp;#65281;
-    &lt;/p&gt;
-    &lt;p&gt;
-              &amp;#25454;&amp;#22269;&amp;#23478;&amp;#26377;&amp;#20851;&amp;#24403;&amp;#23616;&amp;#32479;&amp;#35745;&amp;#65292;&amp;#25913;&amp;#38761;&amp;#24320;&amp;#25918;&amp;#19977;&amp;#21313;&amp;#24180;&amp;#26469;&amp;#65292;&amp;#21319;&amp;#20540;&amp;#26368;&amp;#24555;&amp;#30340;&amp;#26159;&amp;#20303;&amp;#25151;&amp;#12289;&amp;#22675;&amp;#22320;&amp;#12289;&amp;#20044;&amp;#32433;&amp;#24125;&amp;#12289;&amp;#26376;&amp;#39292;&amp;#21644;&amp;#20108;&amp;#22902;&amp;#12290;&amp;#36140;&amp;#20540;&amp;#26368;&amp;#24555;&amp;#30340;&amp;#26159;&amp;#32844;&amp;#31216;&amp;#12289;&amp;#25991;&amp;#20973;&amp;#12289;&amp;#36947;&amp;#24503;&amp;#12289;&amp;#35802;&amp;#20449;&amp;#21644;&amp;#20154;&amp;#27665;&amp;#24065;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-              &amp;#20013;&amp;#22269;&amp;#24050;&amp;#21021;&amp;#27493;&amp;#24314;&amp;#35774;&amp;#25104;&amp;#20026;&amp;#19968;&amp;#20010;&amp;#30001;&amp;#26376;&amp;#20809;&amp;#26063;&amp;#12289;&amp;#21827;&amp;#32769;&amp;#26063;&amp;#12289;&amp;#25171;&amp;#24037;&amp;#26063;&amp;#12289;&amp;#34583;&amp;#23621;&amp;#26063;&amp;#12289;&amp;#34433;&amp;#26063;&amp;#12289;&amp;#29282;&amp;#39578;&amp;#26063;&amp;#12289;&amp;#25265;&amp;#24616;&amp;#26063;&amp;#12289;&amp;#34892;&amp;#39575;&amp;#26063;&amp;#12289;&amp;#36880;&amp;#21033;&amp;#26063;&amp;#21644;&amp;#38544;&amp;#23130;&amp;#26063;&amp;#32452;&amp;#25104;&amp;#30340;&amp;#22810;&amp;#27665;&amp;#26063;&amp;#22269;&amp;#23478;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-              &amp;#36825;&amp;#26159;&amp;#19968;&amp;#20010;&amp;#32473;&amp;#21147;&amp;#30340;&amp;#19968;&amp;#24180;&amp;#65292;&amp;#36825;&amp;#26159;&amp;#19968;&amp;#20010;&amp;#26479;&amp;#20855;&amp;#30340;&amp;#19968;&amp;#24180;&amp;#65292;&amp;#36825;&amp;#20063;&amp;#26159;&amp;#19968;&amp;#20010;&amp;#32416;&amp;#32467;&amp;#30340;&amp;#19968;&amp;#24180;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-              &amp;#36825;&amp;#19968;&amp;#24180;&amp;#65292;&amp;#27743;&amp;#35199;&amp;#30340;&amp;#19968;&amp;#20010;&amp;#38025;&amp;#23376;&amp;#25143;&amp;#29992;&amp;#26368;&amp;#26080;&amp;#22856;&amp;#30340;&amp;#26041;&amp;#24335;&amp;#32467;&amp;#26463;&amp;#20102;&amp;#33258;&amp;#24049;&amp;#30340;&amp;#29983;&amp;#21629;&amp;#65292;&amp;#20182;&amp;#30340;&amp;#27515;&amp;#35777;&amp;#26126;&amp;#19981;&amp;#20102;&amp;#26377;&amp;#20851;&amp;#37096;&amp;#38376;&amp;#30340;&amp;#37326;&amp;#34542;&amp;#19982;&amp;#26080;&amp;#32827;&amp;#65292;&amp;#21482;&amp;#33021;&amp;#35777;&amp;#26126;&amp;#27773;&amp;#27833;&amp;#19968;&amp;#28857;&amp;#23601;&amp;#30528;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-              &amp;#36825;&amp;#19968;&amp;#24180;&amp;#65292;8&amp;#21517;&amp;#39321;&amp;#28207;&amp;#28216;&amp;#23458;&amp;#27515;&amp;#22312;&amp;#20102;&amp;#33778;&amp;#24459;&amp;#23486;&amp;#35686;&amp;#23519;&amp;#30340;&amp;#26538;&amp;#21475;&amp;#19979;&amp;#65292;&amp;#35753;&amp;#39321;&amp;#28207;&amp;#20154;&amp;#30693;&amp;#36947;&amp;#33778;&amp;#24459;&amp;#23486;&amp;#38500;&amp;#20102;&amp;#26377;&amp;#8220;&amp;#33778;&amp;#20323;&amp;#8221;&amp;#65292;&amp;#36824;&amp;#26377;&amp;#8220;&amp;#33778;&amp;#35686;&amp;#8221;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-              
-      &amp;#36825;&amp;#19968;&amp;#24180;&amp;#65292;&amp;#19968;&amp;#20010;&amp;#21334;&amp;#27773;&amp;#36710;&amp;#30340;&amp;#21644;&amp;#19968;&amp;#20010;&amp;#21334;&amp;#36816;&amp;#21160;&amp;#38795;&amp;#30340;&amp;#22312;&amp;#20851;&amp;#20110;&amp;#35841;&amp;#8220;&amp;#32473;&amp;#21147;&amp;#8221;&amp;#21644;&amp;#35841;&amp;#8220;&amp;#19981;&amp;#32473;&amp;#21147;&amp;#8221;&amp;#30340;&amp;#38382;&amp;#39064;&amp;#19978;&amp;#21457;&amp;#29983;&amp;#20102;&amp;#20998;&amp;#27495;&amp;#20174;&amp;#32780;&amp;#24341;&amp;#21457;&amp;#20102;&amp;#8220;3Q&amp;#22823;&amp;#25112;&amp;#8221;&amp;#65292;&amp;#26368;&amp;#21518;&amp;#8220;&amp;#29399;&amp;#26085;&amp;#30340;&amp;#33150;&amp;#35759;&amp;#8221;&amp;#20570;&amp;#20986;&amp;#20102;&amp;#8220;&amp;#19968;&amp;#20010;&amp;#33392;&amp;#38590;&amp;#30340;&amp;#20915;&amp;#23450;&amp;#8221;&amp;#65292;&amp;#26411;&amp;#20102;&amp;#25165;&amp;#30693;&amp;#36947;&amp;#36825;&amp;#20457;&amp;#23385;&amp;#23376;&amp;#20309;&amp;#27490;&amp;#26159;&amp;#8220;&amp;#22353;&amp;#29241;&amp;#8221;&amp;#65292;&amp;#31616;&amp;#30452;&amp;#23601;&amp;#26159;&amp;#8220;&amp;#22353;&amp;#29241;&amp;#8221;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-              &amp;#36825;&amp;#19968;&amp;#24180;&amp;#65292;&amp;#26446;&amp;#21018;&amp;#27809;&amp;#26377;&amp;#20986;&amp;#21517;&amp;#65292;&amp;#26446;&amp;#21018;&amp;#30340;&amp;#20799;&amp;#23376;&amp;#20063;&amp;#27809;&amp;#26377;&amp;#20986;&amp;#21517;&amp;#65292;&amp;#20294;&amp;#26159;&amp;#26446;&amp;#21018;&amp;#30340;&amp;#20799;&amp;#23376;&amp;#30340;&amp;#29240;&amp;#29240;&amp;#20986;&amp;#21517;&amp;#20102;&amp;#12290;&amp;#12288;&amp;#12288;
-    &lt;/p&gt;
-    &lt;p&gt;
-              &amp;#26368;&amp;#36817;&amp;#65292;&amp;#22269;&amp;#23478;&amp;#26576;&amp;#37096;&amp;#20844;&amp;#24067;&amp;#20102;&amp;#19968;&amp;#39033;&amp;#32479;&amp;#35745;&amp;#25968;&amp;#25454;&amp;#65292;&amp;#21578;&amp;#35785;&amp;#20154;&amp;#20204;&amp;#65306;
-    &lt;/p&gt;
-    &lt;p&gt;
-              &amp;#20320;&amp;#35201;&amp;#19981;&amp;#26159;&amp;#19977;&amp;#22823;&amp;#24335;&amp;#20154;&amp;#29289;&amp;#65288;&amp;#22823;&amp;#27454;&amp;#65292;&amp;#22823;&amp;#23448;&amp;#65292;&amp;#22823;&amp;#33109;&amp;#65289;&amp;#32780;&amp;#24819;&amp;#22312;&amp;#21271;&amp;#20140;&amp;#20080;&amp;#22871;100&amp;#24179;&amp;#26041;&amp;#31859;&amp;#24635;&amp;#20215;300&amp;#19975;&amp;#30340;&amp;#25151;&amp;#65292;&amp;#31038;&amp;#20250;&amp;#38454;&amp;#23618;&amp;#25152;&amp;#20184;&amp;#20986;&amp;#30340;&amp;#20195;&amp;#20215;&amp;#35831;&amp;#30475;&amp;#65306;
-    &lt;/p&gt;
-    &lt;p&gt;
-      1.&amp;#20892;&amp;#27665;&amp;#65306;&amp;#31181;&amp;#19977;&amp;#20137;&amp;#22320;&amp;#27599;&amp;#20137;&amp;#32431;&amp;#25910;&amp;#20837;400&amp;#20803;&amp;#30340;&amp;#35805;&amp;#35201;&amp;#20174;&amp;#21776;&amp;#26397;&amp;#24320;&amp;#22987;&amp;#33267;&amp;#20170;&amp;#25165;&amp;#33021;&amp;#20945;&amp;#40784;&amp;#65288;&amp;#36824;&amp;#19981;&amp;#33021;&amp;#26377;&amp;#28798;&amp;#24180;&amp;#65289;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      2.&amp;#24037;&amp;#20154;&amp;#65306;&amp;#27599;&amp;#26376;&amp;#24037;&amp;#36164;1500&amp;#20803;&amp;#38656;&amp;#20174;&amp;#40486;&amp;#29255;&amp;#25112;&amp;#20105;&amp;#19978;&amp;#29677;&amp;#33267;&amp;#20170;&amp;#65288;&amp;#21452;&amp;#20241;&amp;#26085;&amp;#19981;&amp;#33021;&amp;#20241;&amp;#65289;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      3.&amp;#30333;&amp;#39046;&amp;#65306;&amp;#24180;&amp;#34218;6&amp;#19975;&amp;#65292;&amp;#38656;&amp;#20174;1960&amp;#24180;&amp;#19978;&amp;#29677;&amp;#23601;&amp;#25343;&amp;#36825;&amp;#20040;&amp;#22810;&amp;#38065;&amp;#33267;&amp;#20170;&amp;#19981;&amp;#21507;&amp;#19981;&amp;#21917;&amp;#65288;&amp;#21462;&amp;#28040;&amp;#27861;&amp;#23450;&amp;#20551;&amp;#26085;&amp;#65289;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      4.&amp;#25250;&amp;#21163;&amp;#29359;&amp;#65306;&amp;#36830;&amp;#32493;&amp;#20316;&amp;#26696;2500&amp;#27425;&amp;#65288;&amp;#24517;&amp;#39035;&amp;#20107;&amp;#20027;&amp;#26159;&amp;#30333;&amp;#39046;&amp;#65289;&amp;#32422;30&amp;#24180;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-      5.&amp;#22931;&amp;#22899;&amp;#65306;&amp;#36830;&amp;#32493;&amp;#25509;&amp;#23458;10000&amp;#27425;&amp;#65292;&amp;#20197;&amp;#27599;&amp;#22825;&amp;#37117;&amp;#25509;&amp;#19968;&amp;#27425;&amp;#23458;&amp;#65292;&amp;#38656;&amp;#22791;&amp;#25112;10000&amp;#22825;&amp;#65292;&amp;#20174;18&amp;#23681;&amp;#36215;&amp;#25353;&amp;#27492;&amp;#39057;&amp;#29575;&amp;#25509;&amp;#23458;&amp;#21040;46&amp;#23681;&amp;#65288;&amp;#20013;&amp;#38388;&amp;#36824;&amp;#19981;&amp;#33021;&amp;#26469;&amp;#20363;&amp;#20551;)&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#20197;&amp;#19978;&amp;#36824;&amp;#19981;&amp;#31639;&amp;#35013;&amp;#20462;&amp;#12289;&amp;#23478;&amp;#20855;&amp;#12289;&amp;#23478;&amp;#30005;&amp;#31561;&amp;#31561;&amp;#36153;&amp;#29992;&amp;#12290;
-    &lt;/p&gt;</description>
-<link>https://thriken.github.io/archives/2013/07/entry_6.html</link>
-<guid>https://thriken.github.io/archives/2013/07/entry_6.html</guid>
+<table>
+<thead><tr>
+<th>特性</th>
+<th>py2htmlblog</th>
+<th>Hugo</th>
+<th>Jekyll</th>
+<th>Hexo</th>
+</tr></thead><tbody>
+<tr>
+<td>语言</td>
+<td>Python</td>
+<td>Go</td>
+<td>Ruby</td>
+<td>Node.js</td>
+</tr>
+<tr>
+<td>模板兼容 ThingamaBlog</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>内置 FTP/SFTP 发布</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>ZIP 模板包</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>桌面 GUI 编辑器</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>URL 迁移兼容</td>
+<td>✅</td>
+<td>⚠️</td>
+<td>⚠️</td>
+<td>⚠️</td>
+</tr>
+</tbody></table>
 
-<category>Log</category>
+<h2>谁适合用</h2>
 
-<pubDate>Thu, 04 Jul 2013 00:06:05 +0800</pubDate>
-</item>
+<ul>
+<li>从 ThingamaBlog / WordPress 迁移博客的人</li>
+<li>喜欢用 Markdown 写文章、不想碰数据库的人</li>
+<li>想把博客托管在 GitHub Pages 上的人</li>
+<li>需要 FTP 直传虚拟主机的传统站长</li>
+<li>喜欢一切尽在掌控的"静态站点原教旨主义者"</li>
+</ul>
+<h2>许可</h2>
 
-<item>
-<title>简化字</title>
-<description>&lt;p&gt;
-      &amp;#23731;&amp;#39134;&amp;#24180;&amp;#23569;&amp;#26102;&amp;#65292;&amp;#37329;&amp;#20154;&amp;#21335;&amp;#20405;&amp;#65292;&amp;#22269;&amp;#23478;&amp;#22788;&amp;#20110;&amp;#29983;&amp;#27515;&amp;#23384;&amp;#20129;&amp;#20851;&amp;#22836;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#19968;&amp;#22825;&amp;#65292;&amp;#23731;&amp;#27597;&amp;#38382;&amp;#23731;&amp;#39134;&amp;#65306;&amp;#8220;&amp;#22269; &amp;#38590;&amp;#24403;&amp;#22836;&amp;#65292;&amp;#27741;&amp;#23558;&amp;#20309;&amp;#22914;&amp;#65311;&amp;#8221;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#8220;&amp;#20799;&amp;#24403;&amp;#31934;&amp;#24544;&amp;#25253;&amp;#22269;&amp;#65281;&amp;#8221;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#20110;&amp;#26159;&amp;#65292;&amp;#23731;&amp;#27597;&amp;#22312;&amp;#20799;&amp;#23376;&amp;#30340;&amp;#32972;&amp;#19978;&amp;#21050;&amp;#19979;&amp;#20102;&amp;#8220;&amp;#31934;&amp;#24544;&amp;#22577;&amp;#22283;&amp;#8221;&amp;#22235;&amp;#20010;&amp;#22823;&amp;#23383;&amp;#12290;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#38271;&amp;#22823;&amp;#21518;&amp;#65292;&amp;#23731;&amp;#39134;&amp;#21457;&amp;#36215;&amp;#20102;&amp;#27721;&amp;#23383;&amp;#31616;&amp;#21270;&amp;#36816;&amp;#21160;&amp;#12290;
-    &lt;/p&gt;</description>
-<link>https://thriken.github.io/archives/2013/06/entry_5.html</link>
-<guid>https://thriken.github.io/archives/2013/06/entry_5.html</guid>
+<p>MIT License。随便用，随便改，随便分发。</p>]]></content:encoded>
+		<dc:creator>Thriken</dc:creator>
+		<category>软件</category>
+		<pubDate>Wed, 22 Jul 2026 18:23:28 +0800</pubDate>
+		<guid isPermaLink="true">https://thriken.github.io/archives/2026/07/entry_12.html</guid>
+	</item>
+	
+	<item>
+		<title>py2htmlblog 使用指南</title>
+		<link>https://thriken.github.io/archives/2026/07/entry_13.html</link>
+		<description>py2htmlblog 使用指南
 
-<category>Log</category>
+从安装到写文章、构建、切换主题的完整流程。
 
-<pubDate>Thu, 20 Jun 2013 18:15:23 +0800</pubDate>
-</item>
 
-<item>
-<title>夏</title>
-<description>&lt;p&gt;
-      		&amp;#22799;&amp;#23395;&amp;#30340;&amp;#32454;&amp;#38632;&amp;#65292;&amp;#39128;&amp;#27922;&amp;#37117;&amp;#26159;&amp;#25105;&amp;#30340;&amp;#24515;&amp;#24895;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      	&amp;#36825;&amp;#19968;&amp;#23395;&amp;#65292;&amp;#26377;&amp;#25105;&amp;#26368;&amp;#28145;&amp;#30340;&amp;#24605;&amp;#24565;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      		&amp;#23601;&amp;#35753;&amp;#39118;&amp;#25422;&amp;#21435;&amp;#28385;&amp;#24515;&amp;#30340;&amp;#31069;&amp;#31119;&amp;#65292;&amp;#32512;&amp;#28385;&amp;#20320;&amp;#29980;&amp;#34588;&amp;#30340;&amp;#26790;&amp;#22659;&amp;#65307;
-    &lt;/p&gt;
-    &lt;p&gt;
-      	&amp;#23601;&amp;#35753;&amp;#26376;&amp;#20809;&amp;#27922;&amp;#21040;&amp;#20320;&amp;#36523;&amp;#19978;&amp;#65292;&amp;#20195;&amp;#25105;&amp;#25226;&amp;#20320;&amp;#28201;&amp;#26580;&amp;#30340;&amp;#29031;&amp;#39038;&amp;#12290;
-    &lt;/p&gt;</description>
-<link>https://thriken.github.io/archives/2013/06/entry_4.html</link>
-<guid>https://thriken.github.io/archives/2013/06/entry_4.html</guid>
 
-<category>Log</category>
+1. 环境要求
 
-<pubDate>Fri, 07 Jun 2013 01:25:48 +0800</pubDate>
-</item>
 
-<item>
-<title>[转载]笑话两个</title>
-<description>&lt;p&gt;
-      &amp;#38543;&amp;#20415;&amp;#30606;&amp;#36716;&amp;#20004;&amp;#20010;&amp;#31505;&amp;#35805;&amp;#65306;
-    &lt;/p&gt;
-    &lt;p&gt;
-      1.&amp;#26152;&amp;#22825;&amp;#25105;&amp;#21644;&amp;#23219;&amp;#22919;&amp;#20004;&amp;#20154;&amp;#22352;&amp;#27801;&amp;#21457;&amp;#19978;&amp;#27491;&amp;#27941;&amp;#27941;&amp;#26377;&amp;#21619;&amp;#22320;&amp;#30475;&amp;#27743;&amp;#33487;&amp;#21355;&amp;#35270;&amp;#30340;&amp;#38750;&amp;#35802;&amp;#21247;&amp;#25200;,&amp;#20799;&amp;#23376;&amp;#24573;&amp;#28982;&amp;#22238;&amp;#23478;&amp;#65292;&amp;#26395;&amp;#20102;&amp;#30524;&amp;#30005;&amp;#35270;&amp;#26292;&amp;#20986;&amp;#19968;&amp;#21477;:&amp;#8220;&amp;#36825;&amp;#31181;&amp;#30772;&amp;#38795;&amp;#23637;&amp;#38144;&amp;#20250;&amp;#26377;&amp;#20160;&amp;#20040;&amp;#22909;&amp;#30475;&amp;#30340;&amp;#65311;&amp;#8221;&amp;#8230;&amp;#8230;
-    &lt;/p&gt;
-    &lt;p&gt;
-      2.&amp;#21069;&amp;#22825;&amp;#36319;&amp;#26379;&amp;#21451;&amp;#19968;&amp;#36215;&amp;#22352;&amp;#20844;&amp;#20132;&amp;#36710;&amp;#65292;&amp;#36710;&amp;#19978;&amp;#29190;&amp;#28385;&amp;#65292;&amp;#31361;&amp;#28982;&amp;#25105;&amp;#30475;&amp;#21040;&amp;#26379;&amp;#21451;&amp;#36523;&amp;#36793;&amp;#19968;&amp;#20010;&amp;#22823;&amp;#22992;&amp;#28385;&amp;#33080;&amp;#36890;&amp;#32418;&amp;#65292;&amp;#25105;&amp;#23601;&amp;#31034;&amp;#24847;&amp;#26379;&amp;#21451;&amp;#30475;&amp;#30475;&amp;#65292;&amp;#20182;&amp;#30475;&amp;#20102;&amp;#19968;&amp;#30524;&amp;#35828;&amp;#65306;&amp;#22905;&amp;#26159;&amp;#20010;&amp;#23567;&amp;#20599;&amp;#12290; &amp;#25105;&amp;#35828;&amp;#65306;&amp;#20320;&amp;#24590;&amp;#20040;&amp;#30693;&amp;#36947;&amp;#30340;&amp;#65311; 
-      &amp;#31572;&amp;#65306;&amp;#22240;&amp;#20026;&amp;#25105;&amp;#35044;&amp;#20828;&amp;#27809;&amp;#24213;&amp;#65292;&amp;#36890;&amp;#30340;&amp;#12290;&amp;#12290;&amp;#12290;&amp;#12290;&amp;#12290;
-    &lt;/p&gt;</description>
-<link>https://thriken.github.io/archives/2013/05/entry_3.html</link>
-<guid>https://thriken.github.io/archives/2013/05/entry_3.html</guid>
+Python 3.7+
+（可选）PyQt5 — 用于 GUI 界面：pip install PyQt5
+（可选）paramiko — 用于 SFTP 发布：pip install paramiko
 
-<category>Log</category>
+2. 初始化站点
 
-<pubDate>Thu, 16 May 2013 14:46:35 +0800</pubDate>
-</item>
+python main.py init &amp;quot;我的博客&amp;quot; ...</description>
+		<content:encoded><![CDATA[<h1>py2htmlblog 使用指南</h1>
 
-<item>
-<title>[碎碎念]博客开通了!</title>
-<description>&lt;p&gt;
-      
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;font face=&quot;Verdana&quot;&gt;&amp;#37319;&amp;#29992;&amp;#38745;&amp;#24577;&amp;#39029;&amp;#38754;&amp;#20889;&amp;#21338;&amp;#23458;&amp;#65292;&amp;#21548;&amp;#36215;&amp;#26469;&amp;#22909;&amp;#33853;&amp;#21518;&amp;#21734;!&lt;/font&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;font face=&quot;Verdana&quot;&gt;&amp;#19981;&amp;#36807;&amp;#21602;&amp;#65292;&lt;/font&gt;&lt;font face=&quot;Verdana&quot; size=&quot;4&quot;&gt;&amp;#33258;&amp;#30001;&amp;#21270;&amp;#24456;&amp;#39640;&amp;#21734;&lt;/font&gt;&lt;font face=&quot;Verdana&quot;&gt;&amp;#12290;&lt;/font&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-      
-    &lt;/p&gt;
-    &lt;p&gt;
-      
-    &lt;/p&gt;
-    &lt;p&gt;
-      -----------------------
-    &lt;/p&gt;
-    &lt;p&gt;
-      &amp;#28304;&amp;#30721;&amp;#32593;&amp;#21338;&amp;#23458;-Thriken
-    &lt;/p&gt;</description>
-<link>https://thriken.github.io/archives/2013/03/entry_0.html</link>
-<guid>https://thriken.github.io/archives/2013/03/entry_0.html</guid>
+<blockquote>从安装到写文章、构建、切换主题的完整流程。</blockquote>
 
-<category>Log</category>
+<hr />
 
-<pubDate>Thu, 14 Mar 2013 14:04:35 +0800</pubDate>
-</item>
+<h2>1. 环境要求</h2>
 
+<ul>
+<li>Python 3.7+</li>
+<li>（可选）PyQt5 — 用于 GUI 界面：<code>pip install PyQt5</code></li>
+<li>（可选）paramiko — 用于 SFTP 发布：<code>pip install paramiko</code></li>
+</ul>
+<h2>2. 初始化站点</h2>
+
+<pre><code class="language-bash">python main.py init &quot;我的博客&quot; &quot;https://example.com&quot; &quot;作者名&quot;</code></pre>
+
+<p>这会在 <code>data/</code> 下创建 <code>info.json</code>、<code>category.json</code>、<code>links.json</code> 三个配置文件，并在 <code>templates/default/</code> 下复制默认模板。</p>
+
+<h2>3. 配置站点</h2>
+
+<p>编辑 <code>data/info.json</code>，设置站点基本信息：</p>
+
+<pre><code class="language-json">{
+  &quot;site_name&quot;: &quot;我的博客&quot;,
+  &quot;tagline&quot;: &quot;记录生活与技术&quot;,
+  &quot;description&quot;: &quot;一个有趣的个人博客&quot;,
+  &quot;site_url&quot;: &quot;https://example.com&quot;,
+  &quot;author&quot;: &quot;作者名&quot;,
+  &quot;language&quot;: &quot;zh-CN&quot;,
+  &quot;timezone&quot;: &quot;Asia/Shanghai&quot;,
+  &quot;template&quot;: &quot;default&quot;,
+  &quot;posts_per_page&quot;: 10,
+  &quot;rss_count&quot;: 20,
+  &quot;copyright&quot;: &quot;Copyright 2026&quot;,
+  &quot;nav_pages&quot;: [
+    {&quot;title&quot;: &quot;首页&quot;, &quot;url&quot;: &quot;index.html&quot;},
+    {&quot;title&quot;: &quot;归档&quot;, &quot;url&quot;: &quot;archives.html&quot;}
+  ]
+}</code></pre>
+
+<p>详细配置项见：<a href="#appendix-infojson">data/info.json 字段说明</a></p>
+
+<h2>4. 管理分类</h2>
+
+<pre><code class="language-bash"># 添加分类
+python main.py add cat &quot;日志&quot; --slug log
+python main.py add cat &quot;技术&quot; --slug tech
+python main.py add cat &quot;生活&quot; --slug life
+
+# 查看分类
+python main.py list cats
+
+# 删除分类（用 ID）
+python main.py del cat 2</code></pre>
+
+<h2>5. 写文章</h2>
+
+<h3>方式一：命令行新建</h3>
+
+<pre><code class="language-bash">python main.py new &quot;我的第一篇文章&quot; --cat log --tags &quot;博客,Python&quot;</code></pre>
+
+<p>然后输入文章正文（Markdown），输入 <code>EOF</code> 结束。</p>
+
+<p>或者从文件导入正文：</p>
+
+<pre><code class="language-bash">python main.py new &quot;文章标题&quot; --cat tech --file article.md</code></pre>
+
+<h3>方式二：mdblog 批量发布</h3>
+
+<p>把写好的 Markdown 文件放到 <code>mdblog/</code> 目录，文件格式如下：</p>
+
+<pre><code class="language-markdown">---
+title: 文章标题
+category: tech
+tags: python,教程
+datetime: 2026-07-22 17:30:00
+slug: article-slug
+---
+正文内容（Markdown）...</code></pre>
+
+<p>然后运行：</p>
+
+<pre><code class="language-bash">python main.py publish</code></pre>
+
+<p>系统会自动分配 ID、生成 slug、保存到 <code>data/post/</code> 并立即构建站点。</p>
+
+<h3>方式三：GUI 编辑器</h3>
+
+<pre><code class="language-bash">python main.py gui</code></pre>
+
+<p>使用 PyQt 桌面编辑器，支持 Markdown 实时预览、分类管理、文章管理。</p>
+
+<h3>文章 frontmatter 完整字段</h3>
+
+<pre><code class="language-markdown">---
+id: 1
+title: 域名和空间
+datetime: 2014-03-15 09:15:08
+slug: yu-ming-he-kong-jian
+category: log
+tags: 域名, 空间
+quotes: 几个域名和空间要到期
+nearaid: 2
+status: published
+---
+正文内容...</code></pre>
+
+<table>
+<thead><tr>
+<th>字段</th>
+<th>必填</th>
+<th>说明</th>
+</tr></thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td>否</td>
+<td>文章 ID（自动分配时不填）</td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td>是</td>
+<td>文章标题</td>
+</tr>
+<tr>
+<td><code>datetime</code></td>
+<td>否</td>
+<td>发布时间，默认当前时间</td>
+</tr>
+<tr>
+<td><code>slug</code></td>
+<td>否</td>
+<td>URL 别名，留空自动生成</td>
+</tr>
+<tr>
+<td><code>category</code></td>
+<td>是</td>
+<td>分类的 slug</td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>否</td>
+<td>标签，逗号分隔</td>
+</tr>
+<tr>
+<td><code>quotes</code></td>
+<td>否</td>
+<td>引用/摘要</td>
+</tr>
+<tr>
+<td><code>nearaid</code></td>
+<td>否</td>
+<td>关联文章 ID</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>否</td>
+<td><code>published</code> 或 <code>draft</code></td>
+</tr>
+</tbody></table>
+
+<h2>6. 构建站点</h2>
+
+<pre><code class="language-bash">python main.py build</code></pre>
+
+<p>构建过程：</p>
+
+<pre><code>站点: 我的博客
+模板: default
+文章: 10 篇
+分类: 3 个
+友链: 5 个
+正在生成首页...
+正在生成归档页...
+正在生成分类页...
+正在生成文章页...
+正在生成月度归档页...
+正在生成 RSS...
+正在生成 sitemap.xml...
+构建完成 → wwwroot/</code></pre>
+
+<p>生成的静态文件在 <code>wwwroot/</code> 目录中，结构如下：</p>
+
+<pre><code>wwwroot/
+├── index.html              # 首页
+├── index_2.html            # 第 2 页（如果有多页）
+├── archives.html           # 归档/关于页
+├── rss.xml                 # RSS 2.0 订阅
+├── sitemap.xml             # 搜索引擎站点地图
+├── css/                    # 样式表
+├── js/                     # 脚本
+├── images/                 # 图片
+└── archives/               # 归档目录
+    ├── cat_log.html        # 分类页
+    ├── cat_tech.html
+    ├── 2014/03/entry_1.html # 文章页
+    ├── 03-01-2014_03-31-2014.html  # 月度归档
+    └── ...</code></pre>
+
+<h2>7. 切换主题</h2>
+
+<p>在 <code>data/info.json</code> 中修改 <code>template</code> 字段：</p>
+
+<pre><code class="language-json">{
+  &quot;template&quot;: &quot;inove&quot;
+}</code></pre>
+
+<p>支持的模板名：<code>default</code>、<code>inove</code>、<code>boxed</code>、<code>clean</code>、<code>georgia<em>blue</code>、<code>gettysburg</code>、<code>lovingrey</code>、<code>mac</em>stripe</code>、<code>matrix<em>code</code>、<code>modern</em>lines</code>、<code>orange<em>purple</code>、<code>plain</em>blue</code>、<code>plain<em>jane</code>、<code>rusty</code>、<code>slashdot</em>classic</code>、<code>titanium<em>gold</code>、<code>tp</em>thin</code>、<code>trendy</code></p>
+
+<p>主题支持 ZIP 压缩包形式，详见 <a href="#appendix-zip-模板">ZIP 模板说明</a>。</p>
+
+<h2>8. 发布站点</h2>
+
+<p>py2htmlblog 内置三种发布方式，配置一次之后一键部署。</p>
+
+<h3>方式一：FTP 上传</h3>
+
+<p>适合虚拟主机（如 Bluehost、HostGator 等）。</p>
+
+<p>在 <code>data/info.json</code> 中添加：</p>
+
+<pre><code class="language-json">&quot;deploy&quot;: {
+  &quot;method&quot;: &quot;ftp&quot;,
+  &quot;ftp&quot;: {
+    &quot;host&quot;: &quot;ftp.example.com&quot;,
+    &quot;port&quot;: 21,
+    &quot;user&quot;: &quot;username&quot;,
+    &quot;password&quot;: &quot;your-password&quot;,
+    &quot;remote_dir&quot;: &quot;/public_html/&quot;
+  }
+}</code></pre>
+
+<p>运行：</p>
+
+<pre><code class="language-bash">python main.py deploy</code></pre>
+
+<h3>方式二：SFTP 上传</h3>
+
+<p>适合 VPS 或云服务器。</p>
+
+<pre><code class="language-json">&quot;deploy&quot;: {
+  &quot;method&quot;: &quot;sftp&quot;,
+  &quot;sftp&quot;: {
+    &quot;host&quot;: &quot;123.45.67.89&quot;,
+    &quot;port&quot;: 22,
+    &quot;user&quot;: &quot;root&quot;,
+    &quot;key_file&quot;: &quot;~/.ssh/id_rsa&quot;,
+    &quot;remote_dir&quot;: &quot;/var/www/html/&quot;
+  }
+}</code></pre>
+
+<p>支持密码和密钥两种认证方式。如果使用密钥，设置 <code>key_file</code> 即可，留空 <code>password</code>。</p>
+
+<h3>方式三：Git 推送</h3>
+
+<p>适合 GitHub Pages、Gitee Pages、Coding Pages 等。</p>
+
+<pre><code class="language-json">&quot;deploy&quot;: {
+  &quot;method&quot;: &quot;git&quot;,
+  &quot;git&quot;: {
+    &quot;remote&quot;: &quot;origin&quot;,
+    &quot;branch&quot;: &quot;main&quot;,
+    &quot;repo_dir&quot;: &quot;D:/my-site-repo&quot;,
+    &quot;commit_message&quot;: &quot;Site update&quot;
+  }
+}</code></pre>
+
+<p><code>repo_dir</code> 是你本地 Git 仓库的路径。发布时系统会：</p>
+<ol>
+<li>清空仓库目录（保留 .git）</li>
+<li>复制 wwwroot 文件进去</li>
+<li>执行 <code>git add -A && git commit && git push</code></li>
+</ol>
+<h3>模拟运行</h3>
+
+<p>不确定配置是否正确？先模拟运行看看会上传哪些文件：</p>
+
+<pre><code class="language-bash">python main.py deploy --dry-run</code></pre>
+
+<h2>9. 其他命令</h2>
+
+<pre><code class="language-bash"># 查看站点信息
+python main.py info
+
+# 修改站点信息
+python main.py set site_name &quot;新名称&quot;
+python main.py set posts_per_page 5
+
+# 列出文章
+python main.py list posts
+
+# 管理友链
+python main.py add link &quot;GitHub&quot; &quot;https://github.com&quot; --desc &quot;代码托管&quot;
+python main.py del link 2
+python main.py list links
+
+# 删除文章
+python main.py del post 5</code></pre>
+
+<hr />
+
+<h2>附录</h2>
+
+<h3>appendix-infojson</h3>
+
+<h4>data/info.json 完整字段说明</h4>
+
+<table>
+<thead><tr>
+<th>字段</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+</tr></thead><tbody>
+<tr>
+<td><code>site_name</code></td>
+<td>string</td>
+<td>"My Blog"</td>
+<td>站点名称</td>
+</tr>
+<tr>
+<td><code>tagline</code></td>
+<td>string</td>
+<td>""</td>
+<td>副标题/标语</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>string</td>
+<td>""</td>
+<td>站点描述（meta & RSS）</td>
+</tr>
+<tr>
+<td><code>site_url</code></td>
+<td>string</td>
+<td>"http://localhost"</td>
+<td>站点 URL</td>
+</tr>
+<tr>
+<td><code>author</code></td>
+<td>string</td>
+<td>""</td>
+<td>作者名</td>
+</tr>
+<tr>
+<td><code>author_email</code></td>
+<td>string</td>
+<td>""</td>
+<td>作者邮箱</td>
+</tr>
+<tr>
+<td><code>language</code></td>
+<td>string</td>
+<td>"zh-CN"</td>
+<td>语言</td>
+</tr>
+<tr>
+<td><code>timezone</code></td>
+<td>string</td>
+<td>"Asia/Shanghai"</td>
+<td>时区</td>
+</tr>
+<tr>
+<td><code>template</code></td>
+<td>string</td>
+<td>"default"</td>
+<td>模板名</td>
+</tr>
+<tr>
+<td><code>next<em>post</em>id</code></td>
+<td>int</td>
+<td>1</td>
+<td>下一篇文章 ID</td>
+</tr>
+<tr>
+<td><code>posts<em>per</em>page</code></td>
+<td>int</td>
+<td>10</td>
+<td>首页每页文章数</td>
+</tr>
+<tr>
+<td><code>rss_count</code></td>
+<td>int</td>
+<td>20</td>
+<td>RSS 条目数</td>
+</tr>
+<tr>
+<td><code>copyright</code></td>
+<td>string</td>
+<td>""</td>
+<td>版权信息</td>
+</tr>
+<tr>
+<td><code>comment_code</code></td>
+<td>string</td>
+<td>""</td>
+<td>评论系统 HTML 代码</td>
+</tr>
+<tr>
+<td><code>footer_code</code></td>
+<td>string</td>
+<td>""</td>
+<td>页脚统计代码</td>
+</tr>
+<tr>
+<td><code>nav_pages</code></td>
+<td>array</td>
+<td>[]</td>
+<td>导航页面列表</td>
+</tr>
+</tbody></table>
+
+<h3>appendix-zip-模板</h3>
+
+<h4>ZIP 模板使用</h4>
+
+<p>模板可以打包为 ZIP 以节省空间。系统加载优先级：<strong>目录 > ZIP</strong>。</p>
+
+<p>打包命令：</p>
+
+<pre><code class="language-bash">cd templates
+zip -r boxed.zip boxed/</code></pre>
+
+<p>ZIP 内部结构：</p>
+
+<pre><code>boxed.zip
+├── header.html
+├── footer.html
+├── index.html
+├── entry.html
+├── category.html
+├── archives.html
+├── month_archive.html
+├── rss.xml
+└── css/
+    └── style.css</code></pre>
+
+<p>ZIP 首次使用时自动解压到 <code>.workbuddy/template_cache/</code>，后续检测 ZIP 修改时间自动刷新缓存。</p>
+
+<h3>appendix-模板语法</h3>
+
+<h4>模板引擎语法速查</h4>
+
+<table>
+<thead><tr>
+<th>语法</th>
+<th>说明</th>
+<th>示例</th>
+</tr></thead><tbody>
+<tr>
+<td><code>{{ var }}</code></td>
+<td>变量替换</td>
+<td><code>{{ site_name }}</code></td>
+</tr>
+<tr>
+<td><code>{{ obj.attr }}</code></td>
+<td>属性访问</td>
+<td><code>{{ p.title }}</code></td>
+</tr>
+<tr>
+<td>`{{ var \</td>
+<td>filter }}`</td>
+<td>过滤器</td>
+<td>`{{ p.content_html\</td>
+<td>safe }}`</td>
+</tr>
+<tr>
+<td><code>{% for x in list %}...{% endfor %}</code></td>
+<td>循环</td>
+<td>文章列表循环</td>
+</tr>
+<tr>
+<td><code>{% if cond %}...{% endif %}</code></td>
+<td>条件</td>
+<td>分页判断</td>
+</tr>
+<tr>
+<td><code>{% include "file.html" %}</code></td>
+<td>引入子模板</td>
+<td>header/footer</td>
+</tr>
+</tbody></table>
+
+<p>内置过滤器：<code>safe</code>（不转义 HTML）、<code>escape</code>、<code>date:"%Y-%m-%d"</code>、<code>truncate:100</code>、<code>default:"值"</code>、<code>striptags</code>、<code>upper</code>、<code>lower</code>、<code>length</code></p>
+
+<h3>appendix-convert</h3>
+
+<h4>ThingamaBlog 模板转换</h4>
+
+<p>使用 <code>convert<em>thingama</em>templates.py</code> 将 ThingamaBlog 原始模板转换为 py2htmlblog 格式：</p>
+
+<pre><code class="language-bash">python convert_thingama_templates.py</code></pre>
+
+<p>转换规则：</p>
+
+<table>
+<thead><tr>
+<th>ThingamaBlog</th>
+<th>py2htmlblog</th>
+</tr></thead><tbody>
+<tr>
+<td><code><$BlogTitle$></code></td>
+<td><code>{{ site_name }}</code></td>
+</tr>
+<tr>
+<td><code><$EntryTitle$></code></td>
+<td><code>{{ p.title }}</code></td>
+</tr>
+<tr>
+<td><code><$EntryBody$></code></td>
+<td>`{{ p.content_html\</td>
+<td>safe }}`</td>
+</tr>
+<tr>
+<td><code><$EntryPermalink$></code></td>
+<td><code>{{ site<em>url }}/{{ p.entry</em>url }}</code></td>
+</tr>
+<tr>
+<td><code><BlogEntry>...</BlogEntry></code></td>
+<td><code>{% for p in page_posts %}...{% endfor %}</code></td>
+</tr>
+<tr>
+<td><code><ArchiveList>...</ArchiveList></code></td>
+<td><code>{% for a in archives %}...{% endfor %}</code></td>
+</tr>
+<tr>
+<td><code><CategoryList>...</CategoryList></code></td>
+<td><code>{% for c in categories %}...{% endfor %}</code></td>
+</tr>
+</tbody></table>]]></content:encoded>
+		<dc:creator>Thriken</dc:creator>
+		<category>软件</category>
+		<pubDate>Wed, 22 Jul 2026 18:23:28 +0800</pubDate>
+		<guid isPermaLink="true">https://thriken.github.io/archives/2026/07/entry_13.html</guid>
+	</item>
+	
+	<item>
+		<title>py2htmlblog 发布与部署指南</title>
+		<link>https://thriken.github.io/archives/2026/07/entry_14.html</link>
+		<description>py2htmlblog 发布与部署指南
+
+从构建到上线：三种发布方式的详细配置与最佳实践。
+
+
+
+概述
+
+py2htmlblog 执行 python main.py build 后，静态站点生成在 wwwroot/ 目录中。将 wwwroot/ 部署到线上有三种内置方式：
+
+
+
+方式
+适用场景
+传输协议
+需要安装
+
+
+FTP
+虚拟主机、cPanel 空间
+FTP
+无（Python 内置）
+
+
+SF...</description>
+		<content:encoded><![CDATA[<h1>py2htmlblog 发布与部署指南</h1>
+
+<blockquote>从构建到上线：三种发布方式的详细配置与最佳实践。</blockquote>
+
+<hr />
+
+<h2>概述</h2>
+
+<p>py2htmlblog 执行 <code>python main.py build</code> 后，静态站点生成在 <code>wwwroot/</code> 目录中。将 <code>wwwroot/</code> 部署到线上有三种内置方式：</p>
+
+<table>
+<thead><tr>
+<th>方式</th>
+<th>适用场景</th>
+<th>传输协议</th>
+<th>需要安装</th>
+</tr></thead><tbody>
+<tr>
+<td><strong>FTP</strong></td>
+<td>虚拟主机、cPanel 空间</td>
+<td>FTP</td>
+<td>无（Python 内置）</td>
+</tr>
+<tr>
+<td><strong>SFTP</strong></td>
+<td>VPS、云服务器</td>
+<td>SSH File Transfer</td>
+<td><code>pip install paramiko</code></td>
+</tr>
+<tr>
+<td><strong>Git</strong></td>
+<td>GitHub Pages、Gitee Pages</td>
+<td>Git</td>
+<td>无（需安装 Git）</td>
+</tr>
+</tbody></table>
+
+<p>配置写在 <code>data/info.json</code> 的 <code>deploy</code> 字段中，一次配置，一键部署。</p>
+
+<hr />
+
+<h2>FTP 发布</h2>
+
+<h3>适用场景</h3>
+
+<ul>
+<li>传统的 PHP 虚拟主机（Bluehost、HostGator、阿里云虚拟主机等）</li>
+<li>通过 cPanel / DirectAdmin 管理的空间</li>
+<li>任何支持 FTP 上传的托管服务</li>
+</ul>
+<h3>配置</h3>
+
+<p>在 <code>data/info.json</code> 中添加：</p>
+
+<pre><code class="language-json">{
+  &quot;deploy&quot;: {
+    &quot;method&quot;: &quot;ftp&quot;,
+    &quot;ftp&quot;: {
+      &quot;host&quot;: &quot;ftp.yourdomain.com&quot;,
+      &quot;port&quot;: 21,
+      &quot;user&quot;: &quot;ftp_username&quot;,
+      &quot;password&quot;: &quot;your-ftp-password&quot;,
+      &quot;remote_dir&quot;: &quot;/public_html/&quot;
+    }
+  }
+}</code></pre>
+
+<table>
+<thead><tr>
+<th>参数</th>
+<th>说明</th>
+</tr></thead><tbody>
+<tr>
+<td><code>host</code></td>
+<td>FTP 服务器地址</td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>FTP 端口，默认 21</td>
+</tr>
+<tr>
+<td><code>user</code></td>
+<td>FTP 用户名</td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>FTP 密码</td>
+</tr>
+<tr>
+<td><code>remote_dir</code></td>
+<td>远程上传目录。虚拟主机一般是 <code>/public_html/</code> 或 <code>/htdocs/</code></td>
+</tr>
+</tbody></table>
+
+<h3>发布</h3>
+
+<pre><code class="language-bash"># 先构建
+python main.py build
+
+# 发布到 FTP
+python main.py deploy</code></pre>
+
+<h3>工作流程</h3>
+
+<ol>
+<li>连接 FTP 服务器</li>
+<li>自动创建远程目录结构</li>
+<li>逐个上传 wwwroot 下所有文件</li>
+<li>显示上传进度和结果</li>
+</ol>
+<h3>注意事项</h3>
+
+<ul>
+<li>FTP 密码明文存储在 <code>info.json</code> 中，建议将此文件加入 <code>.gitignore</code></li>
+<li>如果虚拟主机支持 SFTP，优先使用 SFTP（加密传输）</li>
+<li>某些虚拟主机的 <code>remote_dir</code> 可能是 <code>/</code> 或 <code>./</code>，按需调整</li>
+</ul>
+<hr />
+
+<h2>SFTP 发布</h2>
+
+<h3>适用场景</h3>
+
+<ul>
+<li>VPS（阿里云 ECS、腾讯云 CVM、AWS EC2 等）</li>
+<li>云服务器（DigitalOcean、Linode、Vultr 等）</li>
+<li>任何支持 SSH 登录的 Linux 服务器</li>
+</ul>
+<h3>安装依赖</h3>
+
+<pre><code class="language-bash">pip install paramiko</code></pre>
+
+<h3>配置</h3>
+
+<h4>密码认证</h4>
+
+<pre><code class="language-json">{
+  &quot;deploy&quot;: {
+    &quot;method&quot;: &quot;sftp&quot;,
+    &quot;sftp&quot;: {
+      &quot;host&quot;: &quot;123.45.67.89&quot;,
+      &quot;port&quot;: 22,
+      &quot;user&quot;: &quot;root&quot;,
+      &quot;password&quot;: &quot;your-password&quot;,
+      &quot;remote_dir&quot;: &quot;/var/www/html/&quot;
+    }
+  }
+}</code></pre>
+
+<h4>SSH 密钥认证（推荐）</h4>
+
+<pre><code class="language-json">{
+  &quot;deploy&quot;: {
+    &quot;method&quot;: &quot;sftp&quot;,
+    &quot;sftp&quot;: {
+      &quot;host&quot;: &quot;123.45.67.89&quot;,
+      &quot;port&quot;: 22,
+      &quot;user&quot;: &quot;root&quot;,
+      &quot;key_file&quot;: &quot;~/.ssh/id_rsa&quot;,
+      &quot;remote_dir&quot;: &quot;/var/www/html/&quot;
+    }
+  }
+}</code></pre>
+
+<table>
+<thead><tr>
+<th>参数</th>
+<th>说明</th>
+</tr></thead><tbody>
+<tr>
+<td><code>host</code></td>
+<td>服务器 IP 或域名</td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>SSH 端口，默认 22</td>
+</tr>
+<tr>
+<td><code>user</code></td>
+<td>SSH 用户名</td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>密码（与 key_file 二选一）</td>
+</tr>
+<tr>
+<td><code>key_file</code></td>
+<td>SSH 私钥路径（支持 <code>~</code> 展开）</td>
+</tr>
+<tr>
+<td><code>remote_dir</code></td>
+<td>远程 Web 目录。常见路径：<code>/var/www/html/</code>、<code>/usr/share/nginx/html/</code></td>
+</tr>
+</tbody></table>
+
+<h3>发布</h3>
+
+<pre><code class="language-bash"># 构建 + 发布
+python main.py build
+python main.py deploy</code></pre>
+
+<h3>智能增量上传</h3>
+
+<p>SFTP 发布会自动比较文件修改时间，只上传有变化的文件，跳过未修改的文件，大幅提升多次发布的速度。</p>
+
+<pre><code class="language-bash"># 第一次发布：全部上传
+[1/50] ✓ index.html
+[2/50] ✓ archives.html
+...
+
+# 第二次发布：只上传变更
+[1/50] - index.html (未变化，跳过)
+[2/50] ✓ archives.html  ← 这里改了
+[3/50] - rss.xml (未变化，跳过)
+...</code></pre>
+
+<h3>安全建议</h3>
+
+<ul>
+<li><strong>优先使用密钥</strong>：<code>password</code> 留空，只用 <code>key_file</code></li>
+<li><strong>限制 SSH 用户权限</strong>：不要用 root，创建一个只对 Web 目录有写权限的专用用户</li>
+<li><strong>文件权限</strong>：确保远程目录的所有者与 SSH 用户一致</li>
+</ul>
+<pre><code class="language-bash">  # 在服务器上
+  sudo chown -R deploy:deploy /var/www/html/</code></pre>
+
+<hr />
+
+<h2>Git 发布</h2>
+
+<h3>适用场景</h3>
+
+<ul>
+<li><strong>GitHub Pages</strong> — <code>username.github.io</code> 仓库</li>
+<li><strong>Gitee Pages</strong> — Gitee 提供的静态页面服务</li>
+<li><strong>Coding Pages</strong> — 腾讯云开发者平台的静态托管</li>
+<li><strong>自建 Git 服务器</strong> — 通过 Git Hooks 自动部署</li>
+</ul>
+<h3>配置</h3>
+
+<pre><code class="language-json">{
+  &quot;deploy&quot;: {
+    &quot;method&quot;: &quot;git&quot;,
+    &quot;git&quot;: {
+      &quot;remote&quot;: &quot;origin&quot;,
+      &quot;branch&quot;: &quot;main&quot;,
+      &quot;repo_dir&quot;: &quot;D:/projects/my-blog&quot;,
+      &quot;commit_message&quot;: &quot;Site update: {{date}}&quot;,
+      &quot;sub_dir&quot;: &quot;&quot;
+    }
+  }
+}</code></pre>
+
+<table>
+<thead><tr>
+<th>参数</th>
+<th>说明</th>
+</tr></thead><tbody>
+<tr>
+<td><code>remote</code></td>
+<td>远程仓库名，默认 <code>origin</code></td>
+</tr>
+<tr>
+<td><code>branch</code></td>
+<td>推送分支，GitHub Pages 通常为 <code>main</code> 或 <code>gh-pages</code></td>
+</tr>
+<tr>
+<td><code>repo_dir</code></td>
+<td>本地 Git 仓库的绝对路径</td>
+</tr>
+<tr>
+<td><code>commit_message</code></td>
+<td>提交信息（支持 <code>{{date}}</code> 自动替换为当前日期）</td>
+</tr>
+<tr>
+<td><code>sub_dir</code></td>
+<td>子目录（如有需要在仓库子目录中部署）</td>
+</tr>
+</tbody></table>
+
+<h3>GitHub Pages 典型设置</h3>
+
+<p>假设你的 GitHub Pages 仓库是 <code>https://github.com/username/username.github.io</code>，已 clone 到本地 <code>D:/projects/username.github.io/</code>：</p>
+
+<pre><code class="language-json">{
+  &quot;deploy&quot;: {
+    &quot;method&quot;: &quot;git&quot;,
+    &quot;git&quot;: {
+      &quot;remote&quot;: &quot;origin&quot;,
+      &quot;branch&quot;: &quot;main&quot;,
+      &quot;repo_dir&quot;: &quot;D:/projects/username.github.io&quot;,
+      &quot;commit_message&quot;: &quot;Blog update {{date}}&quot;
+    }
+  }
+}</code></pre>
+
+<p>发布流程：</p>
+
+<ol>
+<li>清空 <code>D:/projects/username.github.io/</code> 下的旧文件（保留 <code>.git</code>）</li>
+<li>将 <code>wwwroot/</code> 所有文件复制进去</li>
+<li>执行 <code>git add -A && git commit -m "Blog update 2026-07-22"</code></li>
+<li>执行 <code>git push origin main</code></li>
+<li>GitHub Actions 自动部署（或直接生效，取决于配置）</li>
+</ol>
+<h3>Gitee Pages 设置</h3>
+
+<p>Gitee Pages 需要手动点击"更新"按钮。推送后记得去 Gitee Pages 设置页触发重新部署。</p>
+
+<pre><code class="language-json">{
+  &quot;deploy&quot;: {
+    &quot;method&quot;: &quot;git&quot;,
+    &quot;git&quot;: {
+      &quot;remote&quot;: &quot;origin&quot;,
+      &quot;branch&quot;: &quot;master&quot;,
+      &quot;repo_dir&quot;: &quot;D:/projects/gitee-blog&quot;,
+      &quot;commit_message&quot;: &quot;Site update&quot;
+    }
+  }
+}</code></pre>
+
+<h3>注意事项</h3>
+
+<ul>
+<li><code>repo_dir</code> 必须是<strong>已经 clone 好的 Git 仓库</strong></li>
+<li>确保本地仓库已正确设置 remote：<code>git remote -v</code></li>
+<li>如果使用 HTTPS 认证，确保已配置 Git 凭据管理器（<code>git config credential.helper</code>）</li>
+<li>如果使用 SSH 认证，确保 SSH key 已添加到 GitHub/Gitee</li>
+</ul>
+<hr />
+
+<h2>模拟运行</h2>
+
+<p>不确定配置是否正确？使用 <code>--dry-run</code> 参数预览：</p>
+
+<pre><code class="language-bash">python main.py deploy --dry-run</code></pre>
+
+<p>输出示例：</p>
+
+<pre><code>FTP → ftp_user@ftp.example.com:21
+远程目录: /public_html/
+文件数: 25
+[模拟运行] 不会实际上传
+
+  [DRY-RUN] index.html
+  [DRY-RUN] archives.html
+  [DRY-RUN] rss.xml
+  [DRY-RUN] sitemap.xml
+  [DRY-RUN] css/style.css
+  [DRY-RUN] archives/cat_log.html
+  ...</code></pre>
+
+<hr />
+
+<h2>一键构建 + 发布</h2>
+
+<p>构建和发布是两个步骤，但可以合并为一条命令：</p>
+
+<pre><code class="language-bash">python main.py build &amp;&amp; python main.py deploy</code></pre>
+
+<p>或通过 <code>publish</code> 命令（它会先处理 mdblog 再构建，但不包含 deploy）：</p>
+
+<pre><code class="language-bash">python main.py publish &amp;&amp; python main.py deploy</code></pre>
+
+<p>如果需要更自动化的流程，可以写一个简单的脚本：</p>
+
+<p><strong>Windows (build-and-deploy.bat):</strong></p>
+<pre><code class="language-batch">@echo off
+python main.py build
+if %errorlevel% equ 0 (
+    python main.py deploy
+) else (
+    echo 构建失败，取消发布
+)</code></pre>
+
+<p><strong>Linux/Mac (build-and-deploy.sh):</strong></p>
+<pre><code class="language-bash">#!/bin/bash
+python main.py build &amp;&amp; python main.py deploy</code></pre>
+
+<hr />
+
+<h2>常见问题</h2>
+
+<h3>Q: FTP 上传失败："550 Permission denied"</h3>
+<p><strong>A:</strong> 检查 <code>remote<em>dir</code> 路径是否正确。虚拟主机通常不允许写入根目录，确保路径指向 <code>public</em>html</code> 或 <code>htdocs</code>。</p>
+
+<h3>Q: SFTP 连接超时</h3>
+<p><strong>A:</strong> 检查服务器防火墙是否开放了 SSH 端口（默认 22）。如果服务器换了 SSH 端口，修改 <code>port</code> 参数。</p>
+
+<h3>Q: Git push 失败："Permission denied (publickey)"</h3>
+<p><strong>A:</strong> SSH 密钥未配置或未添加到 GitHub/Gitee。检查：</p>
+<pre><code class="language-bash">ssh -T git@github.com   # 测试 GitHub 连接</code></pre>
+<p>如果失败，重新生成并添加 SSH 密钥。</p>
+
+<h3>Q: 为什么 Git 发布要清空仓库？</h3>
+<p><strong>A:</strong> 确保仓库中的文件与 wwwroot 完全同步，避免残留删除的文章页面。如果你有需要在仓库中保留的文件，可以使用 <code>sub_dir</code> 参数将博客部署到子目录。</p>
+
+<h3>Q: 可以同时配置多个发布方式吗？</h3>
+<p><strong>A:</strong> 每次只能使用一种。如果需要切换，修改 <code>deploy.method</code> 的值即可。所有子配置（ftp/sftp/git）可以同时填写，系统只读取当前 <code>method</code> 对应的配置。</p>
+
+<h3>Q: 上传时会覆盖远程已有文件吗？</h3>
+<p><strong>A:</strong> 会。FTP 和 Git 是全量同步。SFTP 会对比修改时间，只上传变更的文件。</p>]]></content:encoded>
+		<dc:creator>Thriken</dc:creator>
+		<category>软件</category>
+		<pubDate>Wed, 22 Jul 2026 18:23:28 +0800</pubDate>
+		<guid isPermaLink="true">https://thriken.github.io/archives/2026/07/entry_14.html</guid>
+	</item>
+	
+	<item>
+		<title>域名和空间</title>
+		<link>https://thriken.github.io/archives/2014/03/entry_11.html</link>
+		<description>几个域名和空间要到期，真是伤脑筋。
+
+
+
+国内不便宜，国外速度快又稳定的主机也不好找。
+
+
+
+求大家推荐廉价稳定小虚拟主机，100M+20M-MYSQL就够用了。</description>
+		<content:encoded><![CDATA[<p>几个域名和空间要到期，真是伤脑筋。</p>
+
+
+
+<p>国内不便宜，国外速度快又稳定的主机也不好找。</p>
+
+
+
+<p>求大家推荐廉价稳定小虚拟主机，100M+20M-MYSQL就够用了。</p>]]></content:encoded>
+		<dc:creator>Thriken</dc:creator>
+		<category>日志</category>
+		<pubDate>Sat, 15 Mar 2014 00:00:00 +0800</pubDate>
+		<guid isPermaLink="true">https://thriken.github.io/archives/2014/03/entry_11.html</guid>
+	</item>
+	
+	<item>
+		<title>电视和电脑的区别</title>
+		<link>https://thriken.github.io/archives/2014/02/entry_10.html</link>
+		<description>电视和电脑的区别？？？
+
+
+
+开电脑：就觉得社会黑暗，官员腐败，恶势力横行，民不聊生，仿佛马上就要灭亡了？？？
+
+
+
+开电视：就觉得社会和谐，人民幸福，载歌载舞，天下太平，国泰民安，一百年都不会出事。
+
+
+
+电脑是生活照，电视是婚纱照。</description>
+		<content:encoded><![CDATA[<p>电视和电脑的区别？？？</p>
+
+
+
+<p>开电脑：就觉得社会黑暗，官员腐败，恶势力横行，民不聊生，仿佛马上就要灭亡了？？？</p>
+
+
+
+<p>开电视：就觉得社会和谐，人民幸福，载歌载舞，天下太平，国泰民安，一百年都不会出事。</p>
+
+
+
+<p>电脑是生活照，电视是婚纱照。</p>]]></content:encoded>
+		<dc:creator>Thriken</dc:creator>
+		<category>日志</category>
+		<pubDate>Thu, 20 Feb 2014 00:00:00 +0800</pubDate>
+		<guid isPermaLink="true">https://thriken.github.io/archives/2014/02/entry_10.html</guid>
+	</item>
+	
+	<item>
+		<title>高才生给主席、总理的信：</title>
+		<link>https://thriken.github.io/archives/2013/07/entry_6.html</link>
+		<description>主席、总理：你们好！
+
+
+
+据国家有关当局统计，改革开放三十年来，升值最快的是住房、墓地、乌纱帽、月饼和二奶。贬值最快的是职称、文凭、道德、诚信和人民币。
+
+
+
+中国已初步建设成为一个由月光族、啃老族、打工族、蜗居族、蚁族、牢骚族、抱怨族、行骗族、逐利族和隐婚族组成的多民族国家。
+
+
+
+这是一个给力的一年，这是一个杯具的一年，这也是一个纠结的一年。
+
+
+
+这一年，江西的一个钉子户用最无奈的方式结束...</description>
+		<content:encoded><![CDATA[<p>主席、总理：你们好！</p>
+
+
+
+<p>据国家有关当局统计，改革开放三十年来，升值最快的是住房、墓地、乌纱帽、月饼和二奶。贬值最快的是职称、文凭、道德、诚信和人民币。</p>
+
+
+
+<p>中国已初步建设成为一个由月光族、啃老族、打工族、蜗居族、蚁族、牢骚族、抱怨族、行骗族、逐利族和隐婚族组成的多民族国家。</p>
+
+
+
+<p>这是一个给力的一年，这是一个杯具的一年，这也是一个纠结的一年。</p>
+
+
+
+<p>这一年，江西的一个钉子户用最无奈的方式结束了自己的生命，他的死证明不了有关部门的野蛮与无耻，只能证明汽油一点就着。</p>
+
+
+
+<p>这一年，8名香港游客死在了菲律宾警察的枪口下，让香港人知道菲律宾除了有“菲佣”，还有“菲警”。</p>
+
+
+
+
+<p>这一年，一个卖汽车的和一个卖运动鞋的在关于谁“给力”和谁“不给力”的问题上发生了分歧从而引发了“3Q大战”，最后“狗日的腾讯”做出了“一个艰难的决定”，末了才知道这俩孙子何止是“坑爹”，简直就是“坑爹”。</p>
+
+
+
+<p>这一年，李刚没有出名，李刚的儿子也没有出名，但是李刚的儿子的爸爸出名了。</p>
+
+
+
+<p>最近，国家某部公布了一项统计数据，告诉人们：</p>
+
+
+
+<p>你要不是三大式人物（大款，大官，大腕）而想在北京买套100平方米总价300万的房，社会阶层所付出的代价请看：</p>
+
+
+
+<p>1.农民：种三亩地每亩纯收入400元的话要从唐朝开始至今才能凑齐（还不能有灾年）；</p>
+
+
+
+<p>2.工人：每月工资1500元需从鸦片战争上班至今（双休日不能休）；</p>
+
+
+
+<p>3.白领：年薪6万，需从1960年上班就拿这么多钱至今不吃不喝（取消法定假日）；</p>
+
+
+
+<p>4.抢劫犯：连续作案2500次（必须事主是白领）约30年。</p>
+
+
+
+<p>5.妓女：连续接客10000次，以每天都接一次客，需备战10000天，从18岁起按此频率接客到46岁（中间还不能来例假)；</p>
+
+
+
+<p>以上还不算装修、家具、家电等等费用。</p>]]></content:encoded>
+		<dc:creator>Thriken</dc:creator>
+		<category>日志</category>
+		<pubDate>Thu, 04 Jul 2013 00:00:00 +0800</pubDate>
+		<guid isPermaLink="true">https://thriken.github.io/archives/2013/07/entry_6.html</guid>
+	</item>
+	
+	<item>
+		<title>中国的现状(经典)</title>
+		<link>https://thriken.github.io/archives/2013/07/entry_7.html</link>
+		<description>1、ATM取出假钱---&gt;银行无责
+
+
+
+2、网上银行被盗---&gt;储户责任
+
+
+
+3、银行多给了钱---&gt;储户义务归还
+
+
+
+4、银行少给了钱---&gt;离开柜台概不负责
+
+
+
+5、ATM机出现故障少给钱---&gt;用户负责
+
+
+
+6、ATM机出现故障多给钱---&gt;用户盗窃
+
+
+
+7、广东开平银行行长贪污4亿---&gt;判2年
+
+
+
+8、ATM多吐7万给老百姓许霆---&gt;判无期
+
+
+
+
+
+
+
+中国现状：
+
+
+...</description>
+		<content:encoded><![CDATA[<p>1、ATM取出假钱--->银行无责</p>
+
+
+
+<p>2、网上银行被盗--->储户责任</p>
+
+
+
+<p>3、银行多给了钱--->储户义务归还</p>
+
+
+
+<p>4、银行少给了钱--->离开柜台概不负责</p>
+
+
+
+<p>5、ATM机出现故障少给钱--->用户负责</p>
+
+
+
+<p>6、ATM机出现故障多给钱--->用户盗窃</p>
+
+
+
+<p>7、广东开平银行行长贪污4亿--->判2年</p>
+
+
+
+<p>8、ATM多吐7万给老百姓许霆--->判无期</p>
+
+
+
+
+
+
+
+<p>中国现状：</p>
+
+
+
+<p>生不起，剖腹一刀五千起；</p>
+
+
+
+<p>读不起，选个学校三万起；</p>
+
+
+
+<p>住不起，二万多元一平米；</p>
+
+
+
+<p>老婆不是娶不起，没房没车谁嫁你？</p>
+
+
+
+<p>养不起，父母下岗儿下地；</p>
+
+
+
+<p>病不起，药费利润十倍起；</p>
+
+
+
+<p>活不起，一月辛劳一千几；</p>
+
+
+
+<p>死不起，火化下葬三万几。</p>
+
+
+
+<p>总结（八个大字）：求生不得，求死不能。</p>
+
+
+
+
+
+
+
+<p>教育：希望进去，绝望出来；</p>
+
+
+
+<p>房产：蜗居进去，房奴出来；</p>
+
+
+
+<p>演艺：玉女进去，小姐出来；</p>
+
+
+
+<p>信访：窦娥进去，疯子出来；</p>
+
+
+
+<p>官场：海瑞进去，和绅出来；</p>
+
+
+
+<p>煤窑：蹲着进去，躺着出来；</p>
+
+
+
+<p>大学：校花进去，残花出来！</p>
+
+
+
+<p>股市：杨百万进去，杨白劳出来；宝马进去，自行车出来；西装革履进去，三角裤出来。</p>
+
+
+
+<p>老百姓在思考，为啥玩不过政府呢？</p>
+
+
+
+<p>原因如下：</p>
+
+
+
+<p>1、你和他讲道理，他和你耍流氓；</p>
+
+
+
+<p>2、你和他耍流氓，他和你讲法制；</p>
+
+
+
+<p>3、你和他讲法制，他和你讲政治；</p>
+
+
+
+<p>4、你和他讲政治，他和你讲国情；</p>
+
+
+
+<p>5、你和他讲国情，他和你讲接轨；</p>
+
+
+
+<p>6、你和他讲接轨，他和你讲文化；</p>
+
+
+
+<p>7、你和他讲文化，他和你讲孔子；</p>
+
+
+
+<p>8、你和他讲孔子，他和你讲老子；</p>
+
+
+
+<p>9、你和他讲老子，他给你装孙子！</p>]]></content:encoded>
+		<dc:creator>Thriken</dc:creator>
+		<category>日志</category>
+		<pubDate>Thu, 04 Jul 2013 00:00:00 +0800</pubDate>
+		<guid isPermaLink="true">https://thriken.github.io/archives/2013/07/entry_7.html</guid>
+	</item>
+	
+	<item>
+		<title>吐槽两会</title>
+		<link>https://thriken.github.io/archives/2013/07/entry_8.html</link>
+		<description>用奶粉灭掉00后，用考试灭掉90后，用房价灭掉80后，用失业灭掉70后，用城管灭掉60后，用下岗灭掉50后，用拆迁灭掉40后，用医改灭掉30后，……最后，活着且活得很好的人都去开两会。
+
+
+
+有人问：“啥是两会呢”？
+
+
+
+农民代表答：会养猪、会交配。
+
+
+
+工人代表答：会挣钱、会消费。
+
+
+
+民工代表答：会讨薪、会下跪。
+
+
+
+保姆代表答：会插足、会叠被。
+
+
+
+艺人代表答：会炒作、会陪睡。
+
+...</description>
+		<content:encoded><![CDATA[<p>用奶粉灭掉00后，用考试灭掉90后，用房价灭掉80后，用失业灭掉70后，用城管灭掉60后，用下岗灭掉50后，用拆迁灭掉40后，用医改灭掉30后，……最后，活着且活得很好的人都去开两会。</p>
+
+
+
+<p>有人问：“啥是两会呢”？</p>
+
+
+
+<p>农民代表答：会养猪、会交配。</p>
+
+
+
+<p>工人代表答：会挣钱、会消费。</p>
+
+
+
+<p>民工代表答：会讨薪、会下跪。</p>
+
+
+
+<p>保姆代表答：会插足、会叠被。</p>
+
+
+
+<p>艺人代表答：会炒作、会陪睡。</p>
+
+
+
+<p>商人代表答：会赚钱、会逃税。</p>
+
+
+
+<p>官员代表答：会撒谎、会受贿。</p>
+
+
+
+<p>股民代表答：会割肉，会流泪。</p>
+
+
+
+
+
+
+
+<p>革命工作苦啊：</p>
+
+
+
+<p>反应慢的会被玩死；</p>
+
+
+
+<p>能力差的会被闲死；</p>
+
+
+
+<p>胆子小的会被吓死；</p>
+
+
+
+<p>酒量小的会被灌死；</p>
+
+
+
+<p>身体差的会被累死；</p>
+
+
+
+
+
+
+
+<p>所以呀：</p>
+
+
+
+<p>人不能太敬业了。</p>
+
+
+
+<p>董存瑞拿得太稳了；</p>
+
+
+
+<p>刘胡兰嘴巴太紧了；</p>
+
+
+
+<p>邱少云趴得太死了；</p>
+
+
+
+<p>黄继光扑得太准了；</p>
+
+
+
+<p>张思德跑得太晚了；</p>
+
+
+
+<p>白求恩会得太多了。</p>
+
+
+
+
+
+
+
+<p>教训呀，心态好才是最重要的！不然人在天堂，钱在银行。</p>]]></content:encoded>
+		<dc:creator>Thriken</dc:creator>
+		<category>日志</category>
+		<pubDate>Thu, 04 Jul 2013 00:00:00 +0800</pubDate>
+		<guid isPermaLink="true">https://thriken.github.io/archives/2013/07/entry_8.html</guid>
+	</item>
+	
+	<item>
+		<title>2012经典的一段话</title>
+		<link>https://thriken.github.io/archives/2013/07/entry_9.html</link>
+		<description>高晓松出狱后发微博称：“11月8日，立冬，期满，归。184天，最长的半年。大家都好吗？外面蹉跎吗？”
+
+
+
+回复：晓松老师，这半年——拉登被毙了；卡扎菲也死了；乔帮主去世了没有爱疯5；凤姐移民了;芙蓉85斤了；
+
+
+
+峰芝还是离了，冠希老师在准备新作品；广电限娱，潘币发行了；城管依旧威武，国足还是老样；老人还是不敢扶，动车的事也没回复；
+
+
+
+您想买的达芬奇是假货，您喝过的拉菲是在轮船灌的，我们都...</description>
+		<content:encoded><![CDATA[<p>高晓松出狱后发微博称：“11月8日，立冬，期满，归。184天，最长的半年。大家都好吗？外面蹉跎吗？”</p>
+
+
+
+<p>回复：晓松老师，这半年——拉登被毙了；卡扎菲也死了；乔帮主去世了没有爱疯5；凤姐移民了;芙蓉85斤了；</p>
+
+
+
+<p>峰芝还是离了，冠希老师在准备新作品；广电限娱，潘币发行了；城管依旧威武，国足还是老样；老人还是不敢扶，动车的事也没回复；</p>
+
+
+
+<p>您想买的达芬奇是假货，您喝过的拉菲是在轮船灌的，我们都还好，就是没船票。</p>]]></content:encoded>
+		<dc:creator>Thriken</dc:creator>
+		<category>日志</category>
+		<pubDate>Thu, 04 Jul 2013 00:00:00 +0800</pubDate>
+		<guid isPermaLink="true">https://thriken.github.io/archives/2013/07/entry_9.html</guid>
+	</item>
+	
+	<item>
+		<title>简化字</title>
+		<link>https://thriken.github.io/archives/2013/06/entry_5.html</link>
+		<description>岳飞年少时，金人南侵，国家处于生死存亡关头。
+
+
+
+一天，岳母问岳飞：“国 难当头，汝将何如？”
+
+
+
+“儿当精忠报国！”
+
+
+
+于是，岳母在儿子的背上刺下了“精忠報國”四个大字。
+
+
+
+长大后，岳飞发起了汉字简化运动。</description>
+		<content:encoded><![CDATA[<p>岳飞年少时，金人南侵，国家处于生死存亡关头。</p>
+
+
+
+<p>一天，岳母问岳飞：“国 难当头，汝将何如？”</p>
+
+
+
+<p>“儿当精忠报国！”</p>
+
+
+
+<p>于是，岳母在儿子的背上刺下了“精忠報國”四个大字。</p>
+
+
+
+<p>长大后，岳飞发起了汉字简化运动。</p>]]></content:encoded>
+		<dc:creator>Thriken</dc:creator>
+		<category>日志</category>
+		<pubDate>Thu, 20 Jun 2013 00:00:00 +0800</pubDate>
+		<guid isPermaLink="true">https://thriken.github.io/archives/2013/06/entry_5.html</guid>
+	</item>
+	
+	<item>
+		<title>夏</title>
+		<link>https://thriken.github.io/archives/2013/06/entry_4.html</link>
+		<description>夏季的细雨，飘洒都是我的心愿；
+
+
+
+这一季，有我最深的思念；
+
+
+
+就让风捎去满心的祝福，缀满你甜蜜的梦境；
+
+
+
+就让月光洒到你身上，代我把你温柔的照顾。</description>
+		<content:encoded><![CDATA[<p>夏季的细雨，飘洒都是我的心愿；</p>
+
+
+
+<p>这一季，有我最深的思念；</p>
+
+
+
+<p>就让风捎去满心的祝福，缀满你甜蜜的梦境；</p>
+
+
+
+<p>就让月光洒到你身上，代我把你温柔的照顾。</p>]]></content:encoded>
+		<dc:creator>Thriken</dc:creator>
+		<category>日志</category>
+		<pubDate>Fri, 07 Jun 2013 00:00:00 +0800</pubDate>
+		<guid isPermaLink="true">https://thriken.github.io/archives/2013/06/entry_4.html</guid>
+	</item>
+	
+	<item>
+		<title>[转载]笑话两个</title>
+		<link>https://thriken.github.io/archives/2013/05/entry_3.html</link>
+		<description>随便瞎转两个笑话：
+
+
+
+1.昨天我和媳妇两人坐沙发上正津津有味地看江苏卫视的非诚勿扰,儿子忽然回家，望了眼电视暴出一句:“这种破鞋展销会有什么好看的？”……
+
+
+
+2.前天跟朋友一起坐公交车，车上爆满，突然我看到朋友身边一个大姐满脸通红，我就示意朋友看看，他看了一眼说：她是个小偷。 我说：你怎么知道的？ 答：因为我裤兜没底，通的。。。。。</description>
+		<content:encoded><![CDATA[<p>随便瞎转两个笑话：</p>
+
+
+
+<p>1.昨天我和媳妇两人坐沙发上正津津有味地看江苏卫视的非诚勿扰,儿子忽然回家，望了眼电视暴出一句:“这种破鞋展销会有什么好看的？”……</p>
+
+
+
+<p>2.前天跟朋友一起坐公交车，车上爆满，突然我看到朋友身边一个大姐满脸通红，我就示意朋友看看，他看了一眼说：她是个小偷。 我说：你怎么知道的？ 答：因为我裤兜没底，通的。。。。。</p>]]></content:encoded>
+		<dc:creator>Thriken</dc:creator>
+		<category>日志</category>
+		<pubDate>Thu, 16 May 2013 00:00:00 +0800</pubDate>
+		<guid isPermaLink="true">https://thriken.github.io/archives/2013/05/entry_3.html</guid>
+	</item>
+	
+	<item>
+		<title>[碎碎念]博客开通了!</title>
+		<link>https://thriken.github.io/archives/2013/03/entry_0.html</link>
+		<description>采用静态页面写博客，听起来好落后哦!
+
+
+
+不过呢，自由化很高哦。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+源码网博客-Thriken</description>
+		<content:encoded><![CDATA[<p>采用静态页面写博客，听起来好落后哦!</p>
+
+
+
+<p>不过呢，自由化很高哦。</p>
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+
+
+<p>源码网博客-Thriken</p>]]></content:encoded>
+		<dc:creator>Thriken</dc:creator>
+		<category>日志</category>
+		<pubDate>Thu, 14 Mar 2013 00:00:00 +0800</pubDate>
+		<guid isPermaLink="true">https://thriken.github.io/archives/2013/03/entry_0.html</guid>
+	</item>
+	
 </channel>
 </rss>

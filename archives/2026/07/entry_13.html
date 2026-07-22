@@ -1,0 +1,779 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>py2htmlblog 使用指南 - ThingamaBlog</title>
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0 - all posts" href="https://thriken.github.io/rss.xml" />
+	<!-- style START -->
+	<style type="text/css" media="screen">@import url( https://thriken.github.io/style.css );</style>
+	<!--[if IE 6]>
+	<link rel="stylesheet" href="https://thriken.github.io/ie6.css" type="text/css" media="screen" />
+	<![endif]-->
+	<!-- style END -->
+	<!-- script START -->
+	<script type="text/javascript" src="https://thriken.github.io/js/util.js"></script>
+	<script type="text/javascript" src="https://thriken.github.io/js/menu.js"></script>
+	<!-- script END -->
+</head>
+<body>
+<!-- wrap START -->
+<div id="wrap">
+<!-- container START -->
+<div id="container">
+<!-- header START -->
+<div id="header">
+	<div id="caption">
+		<h1 id="title"><a href="https://thriken.github.io/index.html">ThingamaBlog</a></h1>
+		<div id="tagline">ThingamaBlog</div>
+	</div>
+	<!-- navigation START -->
+	<div id="navigation">
+		<ul id="menus">
+			<li class="current_page_item"><a class="home" title="Home" href="https://thriken.github.io/index.html">Home</a></li>
+			<li class="page_item page-item-2"><a href="https://thriken.github.io/archives.html" title="About">About</a></li>
+			<li><a class="lastmenu" href="javascript:void(0);"></a></li>
+		</ul>
+		<div class="fixed"></div>
+	</div>
+	<!-- navigation END -->
+	<div class="fixed"></div>
+</div>
+<!-- header END -->
+<!-- content START -->
+<div id="content">
+
+	<!-- main START -->
+	<div id="main">
+
+		<p align="center">
+		
+		<a href="https://thriken.github.io/archives/2026/07/entry_14.html">&laquo; py2htmlblog 发布与部署指南</a> |
+		
+		<a href="https://thriken.github.io/index.html">Main</a>
+		
+		| <a href="https://thriken.github.io/archives/2026/07/entry_12.html">py2htmlblog：把 Markdown 变成博客，就这么简单 &raquo;</a>
+		
+		</p>
+
+		<div class="post" id="post-19">
+			<h2><a class="title" href="https://thriken.github.io/archives/2026/07/entry_13.html" rel="bookmark">py2htmlblog 使用指南</a></h2>
+			<div class="info">
+				<span class="date">2026-07-22</span>
+				<div class="fixed"></div>
+			</div>
+			<div class="content">
+				<h1>py2htmlblog 使用指南</h1>
+
+<blockquote>从安装到写文章、构建、切换主题的完整流程。</blockquote>
+
+<hr />
+
+<h2>1. 环境要求</h2>
+
+<ul>
+<li>Python 3.7+</li>
+<li>（可选）PyQt5 — 用于 GUI 界面：<code>pip install PyQt5</code></li>
+<li>（可选）paramiko — 用于 SFTP 发布：<code>pip install paramiko</code></li>
+</ul>
+<h2>2. 初始化站点</h2>
+
+<pre><code class="language-bash">python main.py init &quot;我的博客&quot; &quot;https://example.com&quot; &quot;作者名&quot;</code></pre>
+
+<p>这会在 <code>data/</code> 下创建 <code>info.json</code>、<code>category.json</code>、<code>links.json</code> 三个配置文件，并在 <code>templates/default/</code> 下复制默认模板。</p>
+
+<h2>3. 配置站点</h2>
+
+<p>编辑 <code>data/info.json</code>，设置站点基本信息：</p>
+
+<pre><code class="language-json">{
+  &quot;site_name&quot;: &quot;我的博客&quot;,
+  &quot;tagline&quot;: &quot;记录生活与技术&quot;,
+  &quot;description&quot;: &quot;一个有趣的个人博客&quot;,
+  &quot;site_url&quot;: &quot;https://example.com&quot;,
+  &quot;author&quot;: &quot;作者名&quot;,
+  &quot;language&quot;: &quot;zh-CN&quot;,
+  &quot;timezone&quot;: &quot;Asia/Shanghai&quot;,
+  &quot;template&quot;: &quot;default&quot;,
+  &quot;posts_per_page&quot;: 10,
+  &quot;rss_count&quot;: 20,
+  &quot;copyright&quot;: &quot;Copyright 2026&quot;,
+  &quot;nav_pages&quot;: [
+    {&quot;title&quot;: &quot;首页&quot;, &quot;url&quot;: &quot;index.html&quot;},
+    {&quot;title&quot;: &quot;归档&quot;, &quot;url&quot;: &quot;archives.html&quot;}
+  ]
+}</code></pre>
+
+<p>详细配置项见：<a href="#appendix-infojson">data/info.json 字段说明</a></p>
+
+<h2>4. 管理分类</h2>
+
+<pre><code class="language-bash"># 添加分类
+python main.py add cat &quot;日志&quot; --slug log
+python main.py add cat &quot;技术&quot; --slug tech
+python main.py add cat &quot;生活&quot; --slug life
+
+# 查看分类
+python main.py list cats
+
+# 删除分类（用 ID）
+python main.py del cat 2</code></pre>
+
+<h2>5. 写文章</h2>
+
+<h3>方式一：命令行新建</h3>
+
+<pre><code class="language-bash">python main.py new &quot;我的第一篇文章&quot; --cat log --tags &quot;博客,Python&quot;</code></pre>
+
+<p>然后输入文章正文（Markdown），输入 <code>EOF</code> 结束。</p>
+
+<p>或者从文件导入正文：</p>
+
+<pre><code class="language-bash">python main.py new &quot;文章标题&quot; --cat tech --file article.md</code></pre>
+
+<h3>方式二：mdblog 批量发布</h3>
+
+<p>把写好的 Markdown 文件放到 <code>mdblog/</code> 目录，文件格式如下：</p>
+
+<pre><code class="language-markdown">---
+title: 文章标题
+category: tech
+tags: python,教程
+datetime: 2026-07-22 17:30:00
+slug: article-slug
+---
+正文内容（Markdown）...</code></pre>
+
+<p>然后运行：</p>
+
+<pre><code class="language-bash">python main.py publish</code></pre>
+
+<p>系统会自动分配 ID、生成 slug、保存到 <code>data/post/</code> 并立即构建站点。</p>
+
+<h3>方式三：GUI 编辑器</h3>
+
+<pre><code class="language-bash">python main.py gui</code></pre>
+
+<p>使用 PyQt 桌面编辑器，支持 Markdown 实时预览、分类管理、文章管理。</p>
+
+<h3>文章 frontmatter 完整字段</h3>
+
+<pre><code class="language-markdown">---
+id: 1
+title: 域名和空间
+datetime: 2014-03-15 09:15:08
+slug: yu-ming-he-kong-jian
+category: log
+tags: 域名, 空间
+quotes: 几个域名和空间要到期
+nearaid: 2
+status: published
+---
+正文内容...</code></pre>
+
+<table>
+<thead><tr>
+<th>字段</th>
+<th>必填</th>
+<th>说明</th>
+</tr></thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td>否</td>
+<td>文章 ID（自动分配时不填）</td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td>是</td>
+<td>文章标题</td>
+</tr>
+<tr>
+<td><code>datetime</code></td>
+<td>否</td>
+<td>发布时间，默认当前时间</td>
+</tr>
+<tr>
+<td><code>slug</code></td>
+<td>否</td>
+<td>URL 别名，留空自动生成</td>
+</tr>
+<tr>
+<td><code>category</code></td>
+<td>是</td>
+<td>分类的 slug</td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>否</td>
+<td>标签，逗号分隔</td>
+</tr>
+<tr>
+<td><code>quotes</code></td>
+<td>否</td>
+<td>引用/摘要</td>
+</tr>
+<tr>
+<td><code>nearaid</code></td>
+<td>否</td>
+<td>关联文章 ID</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>否</td>
+<td><code>published</code> 或 <code>draft</code></td>
+</tr>
+</tbody></table>
+
+<h2>6. 构建站点</h2>
+
+<pre><code class="language-bash">python main.py build</code></pre>
+
+<p>构建过程：</p>
+
+<pre><code>站点: 我的博客
+模板: default
+文章: 10 篇
+分类: 3 个
+友链: 5 个
+正在生成首页...
+正在生成归档页...
+正在生成分类页...
+正在生成文章页...
+正在生成月度归档页...
+正在生成 RSS...
+正在生成 sitemap.xml...
+构建完成 → wwwroot/</code></pre>
+
+<p>生成的静态文件在 <code>wwwroot/</code> 目录中，结构如下：</p>
+
+<pre><code>wwwroot/
+├── index.html              # 首页
+├── index_2.html            # 第 2 页（如果有多页）
+├── archives.html           # 归档/关于页
+├── rss.xml                 # RSS 2.0 订阅
+├── sitemap.xml             # 搜索引擎站点地图
+├── css/                    # 样式表
+├── js/                     # 脚本
+├── images/                 # 图片
+└── archives/               # 归档目录
+    ├── cat_log.html        # 分类页
+    ├── cat_tech.html
+    ├── 2014/03/entry_1.html # 文章页
+    ├── 03-01-2014_03-31-2014.html  # 月度归档
+    └── ...</code></pre>
+
+<h2>7. 切换主题</h2>
+
+<p>在 <code>data/info.json</code> 中修改 <code>template</code> 字段：</p>
+
+<pre><code class="language-json">{
+  &quot;template&quot;: &quot;inove&quot;
+}</code></pre>
+
+<p>支持的模板名：<code>default</code>、<code>inove</code>、<code>boxed</code>、<code>clean</code>、<code>georgia<em>blue</code>、<code>gettysburg</code>、<code>lovingrey</code>、<code>mac</em>stripe</code>、<code>matrix<em>code</code>、<code>modern</em>lines</code>、<code>orange<em>purple</code>、<code>plain</em>blue</code>、<code>plain<em>jane</code>、<code>rusty</code>、<code>slashdot</em>classic</code>、<code>titanium<em>gold</code>、<code>tp</em>thin</code>、<code>trendy</code></p>
+
+<p>主题支持 ZIP 压缩包形式，详见 <a href="#appendix-zip-模板">ZIP 模板说明</a>。</p>
+
+<h2>8. 发布站点</h2>
+
+<p>py2htmlblog 内置三种发布方式，配置一次之后一键部署。</p>
+
+<h3>方式一：FTP 上传</h3>
+
+<p>适合虚拟主机（如 Bluehost、HostGator 等）。</p>
+
+<p>在 <code>data/info.json</code> 中添加：</p>
+
+<pre><code class="language-json">&quot;deploy&quot;: {
+  &quot;method&quot;: &quot;ftp&quot;,
+  &quot;ftp&quot;: {
+    &quot;host&quot;: &quot;ftp.example.com&quot;,
+    &quot;port&quot;: 21,
+    &quot;user&quot;: &quot;username&quot;,
+    &quot;password&quot;: &quot;your-password&quot;,
+    &quot;remote_dir&quot;: &quot;/public_html/&quot;
+  }
+}</code></pre>
+
+<p>运行：</p>
+
+<pre><code class="language-bash">python main.py deploy</code></pre>
+
+<h3>方式二：SFTP 上传</h3>
+
+<p>适合 VPS 或云服务器。</p>
+
+<pre><code class="language-json">&quot;deploy&quot;: {
+  &quot;method&quot;: &quot;sftp&quot;,
+  &quot;sftp&quot;: {
+    &quot;host&quot;: &quot;123.45.67.89&quot;,
+    &quot;port&quot;: 22,
+    &quot;user&quot;: &quot;root&quot;,
+    &quot;key_file&quot;: &quot;~/.ssh/id_rsa&quot;,
+    &quot;remote_dir&quot;: &quot;/var/www/html/&quot;
+  }
+}</code></pre>
+
+<p>支持密码和密钥两种认证方式。如果使用密钥，设置 <code>key_file</code> 即可，留空 <code>password</code>。</p>
+
+<h3>方式三：Git 推送</h3>
+
+<p>适合 GitHub Pages、Gitee Pages、Coding Pages 等。</p>
+
+<pre><code class="language-json">&quot;deploy&quot;: {
+  &quot;method&quot;: &quot;git&quot;,
+  &quot;git&quot;: {
+    &quot;remote&quot;: &quot;origin&quot;,
+    &quot;branch&quot;: &quot;main&quot;,
+    &quot;repo_dir&quot;: &quot;D:/my-site-repo&quot;,
+    &quot;commit_message&quot;: &quot;Site update&quot;
+  }
+}</code></pre>
+
+<p><code>repo_dir</code> 是你本地 Git 仓库的路径。发布时系统会：</p>
+<ol>
+<li>清空仓库目录（保留 .git）</li>
+<li>复制 wwwroot 文件进去</li>
+<li>执行 <code>git add -A && git commit && git push</code></li>
+</ol>
+<h3>模拟运行</h3>
+
+<p>不确定配置是否正确？先模拟运行看看会上传哪些文件：</p>
+
+<pre><code class="language-bash">python main.py deploy --dry-run</code></pre>
+
+<h2>9. 其他命令</h2>
+
+<pre><code class="language-bash"># 查看站点信息
+python main.py info
+
+# 修改站点信息
+python main.py set site_name &quot;新名称&quot;
+python main.py set posts_per_page 5
+
+# 列出文章
+python main.py list posts
+
+# 管理友链
+python main.py add link &quot;GitHub&quot; &quot;https://github.com&quot; --desc &quot;代码托管&quot;
+python main.py del link 2
+python main.py list links
+
+# 删除文章
+python main.py del post 5</code></pre>
+
+<hr />
+
+<h2>附录</h2>
+
+<h3>appendix-infojson</h3>
+
+<h4>data/info.json 完整字段说明</h4>
+
+<table>
+<thead><tr>
+<th>字段</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+</tr></thead><tbody>
+<tr>
+<td><code>site_name</code></td>
+<td>string</td>
+<td>"My Blog"</td>
+<td>站点名称</td>
+</tr>
+<tr>
+<td><code>tagline</code></td>
+<td>string</td>
+<td>""</td>
+<td>副标题/标语</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>string</td>
+<td>""</td>
+<td>站点描述（meta & RSS）</td>
+</tr>
+<tr>
+<td><code>site_url</code></td>
+<td>string</td>
+<td>"http://localhost"</td>
+<td>站点 URL</td>
+</tr>
+<tr>
+<td><code>author</code></td>
+<td>string</td>
+<td>""</td>
+<td>作者名</td>
+</tr>
+<tr>
+<td><code>author_email</code></td>
+<td>string</td>
+<td>""</td>
+<td>作者邮箱</td>
+</tr>
+<tr>
+<td><code>language</code></td>
+<td>string</td>
+<td>"zh-CN"</td>
+<td>语言</td>
+</tr>
+<tr>
+<td><code>timezone</code></td>
+<td>string</td>
+<td>"Asia/Shanghai"</td>
+<td>时区</td>
+</tr>
+<tr>
+<td><code>template</code></td>
+<td>string</td>
+<td>"default"</td>
+<td>模板名</td>
+</tr>
+<tr>
+<td><code>next<em>post</em>id</code></td>
+<td>int</td>
+<td>1</td>
+<td>下一篇文章 ID</td>
+</tr>
+<tr>
+<td><code>posts<em>per</em>page</code></td>
+<td>int</td>
+<td>10</td>
+<td>首页每页文章数</td>
+</tr>
+<tr>
+<td><code>rss_count</code></td>
+<td>int</td>
+<td>20</td>
+<td>RSS 条目数</td>
+</tr>
+<tr>
+<td><code>copyright</code></td>
+<td>string</td>
+<td>""</td>
+<td>版权信息</td>
+</tr>
+<tr>
+<td><code>comment_code</code></td>
+<td>string</td>
+<td>""</td>
+<td>评论系统 HTML 代码</td>
+</tr>
+<tr>
+<td><code>footer_code</code></td>
+<td>string</td>
+<td>""</td>
+<td>页脚统计代码</td>
+</tr>
+<tr>
+<td><code>nav_pages</code></td>
+<td>array</td>
+<td>[]</td>
+<td>导航页面列表</td>
+</tr>
+</tbody></table>
+
+<h3>appendix-zip-模板</h3>
+
+<h4>ZIP 模板使用</h4>
+
+<p>模板可以打包为 ZIP 以节省空间。系统加载优先级：<strong>目录 > ZIP</strong>。</p>
+
+<p>打包命令：</p>
+
+<pre><code class="language-bash">cd templates
+zip -r boxed.zip boxed/</code></pre>
+
+<p>ZIP 内部结构：</p>
+
+<pre><code>boxed.zip
+├── header.html
+├── footer.html
+├── index.html
+├── entry.html
+├── category.html
+├── archives.html
+├── month_archive.html
+├── rss.xml
+└── css/
+    └── style.css</code></pre>
+
+<p>ZIP 首次使用时自动解压到 <code>.workbuddy/template_cache/</code>，后续检测 ZIP 修改时间自动刷新缓存。</p>
+
+<h3>appendix-模板语法</h3>
+
+<h4>模板引擎语法速查</h4>
+
+<table>
+<thead><tr>
+<th>语法</th>
+<th>说明</th>
+<th>示例</th>
+</tr></thead><tbody>
+<tr>
+<td><code>{{ var }}</code></td>
+<td>变量替换</td>
+<td><code>{{ site_name }}</code></td>
+</tr>
+<tr>
+<td><code>{{ obj.attr }}</code></td>
+<td>属性访问</td>
+<td><code>{{ p.title }}</code></td>
+</tr>
+<tr>
+<td>`{{ var \</td>
+<td>filter }}`</td>
+<td>过滤器</td>
+<td>`{{ p.content_html\</td>
+<td>safe }}`</td>
+</tr>
+<tr>
+<td><code>{% for x in list %}...{% endfor %}</code></td>
+<td>循环</td>
+<td>文章列表循环</td>
+</tr>
+<tr>
+<td><code>{% if cond %}...{% endif %}</code></td>
+<td>条件</td>
+<td>分页判断</td>
+</tr>
+<tr>
+<td><code>{% include "file.html" %}</code></td>
+<td>引入子模板</td>
+<td>header/footer</td>
+</tr>
+</tbody></table>
+
+<p>内置过滤器：<code>safe</code>（不转义 HTML）、<code>escape</code>、<code>date:"%Y-%m-%d"</code>、<code>truncate:100</code>、<code>default:"值"</code>、<code>striptags</code>、<code>upper</code>、<code>lower</code>、<code>length</code></p>
+
+<h3>appendix-convert</h3>
+
+<h4>ThingamaBlog 模板转换</h4>
+
+<p>使用 <code>convert<em>thingama</em>templates.py</code> 将 ThingamaBlog 原始模板转换为 py2htmlblog 格式：</p>
+
+<pre><code class="language-bash">python convert_thingama_templates.py</code></pre>
+
+<p>转换规则：</p>
+
+<table>
+<thead><tr>
+<th>ThingamaBlog</th>
+<th>py2htmlblog</th>
+</tr></thead><tbody>
+<tr>
+<td><code><$BlogTitle$></code></td>
+<td><code>{{ site_name }}</code></td>
+</tr>
+<tr>
+<td><code><$EntryTitle$></code></td>
+<td><code>{{ p.title }}</code></td>
+</tr>
+<tr>
+<td><code><$EntryBody$></code></td>
+<td>`{{ p.content_html\</td>
+<td>safe }}`</td>
+</tr>
+<tr>
+<td><code><$EntryPermalink$></code></td>
+<td><code>{{ site<em>url }}/{{ p.entry</em>url }}</code></td>
+</tr>
+<tr>
+<td><code><BlogEntry>...</BlogEntry></code></td>
+<td><code>{% for p in page_posts %}...{% endfor %}</code></td>
+</tr>
+<tr>
+<td><code><ArchiveList>...</ArchiveList></code></td>
+<td><code>{% for a in archives %}...{% endfor %}</code></td>
+</tr>
+<tr>
+<td><code><CategoryList>...</CategoryList></code></td>
+<td><code>{% for c in categories %}...{% endfor %}</code></td>
+</tr>
+</tbody></table>
+				<p class="under">
+				Categories: <a href="https://thriken.github.io/archives/cat_software.html">软件</a>
+				</p>
+				
+				<div class="fixed"></div>
+				
+			</div>
+		</div>
+
+		
+
+		<div id="pagenavi">
+			<span class="newer"><a href="https://thriken.github.io/archives/2026/07/entry_14.html">&laquo; py2htmlblog 发布与部署指南</a></span>
+			<span class="older"><a href="https://thriken.github.io/archives/2026/07/entry_12.html">py2htmlblog：把 Markdown 变成博客，就这么简单 &raquo;</a></span>
+			<div class="fixed"></div>
+		</div>
+
+	</div>
+	<!-- main END -->
+<!-- sidebar START -->
+<div id="sidebar">
+<!-- sidebar north START -->
+<div id="northsidebar" class="sidebar">
+	<!-- feeds -->
+	<div class="widget widget_feeds">
+		<div class="content">
+			<div id="subscribe">
+				<a id="feedrss" title="Subscribe to this blog..." href="https://thriken.github.io/rss.xml"><abbr title="Really Simple Syndication">RSS</abbr> feed</a>
+				<ul id="feed_readers">
+					<li id="google_reader"><a class="reader" title="Subscribe with Google" href="http://fusion.google.com/add?feedurl=https://thriken.github.io/rss.xml"><span>Google</span></a></li>
+					<li id="youdao_reader"><a class="reader" title="Subscribe with Youdao" href="http://reader.youdao.com/#url=https://thriken.github.io/rss.xml"><span>Youdao</span></a></li>
+					<li id="xianguo_reader"><a class="reader" title="Subscribe with Xian Guo" href="http://www.xianguo.com/subscribe.php?url=https://thriken.github.io/rss.xml"><span>Xian Guo</span></a></li>
+					<li id="zhuaxia_reader"><a class="reader" title="Subscribe with Zhua Xia" href="http://www.zhuaxia.com/add_channel.php?url=https://thriken.github.io/rss.xml"><span>Zhua Xia</span></a></li>
+					<li id="yahoo_reader"><a class="reader" title="Subscribe with My Yahoo!" href="http://add.my.yahoo.com/rss?url=https://thriken.github.io/rss.xml"><span>My Yahoo!</span></a></li>
+					<li id="newsgator_reader"><a class="reader" title="Subscribe with newsgator" href="http://www.newsgator.com/ngs/subscriber/subfext.aspx?url=https://thriken.github.io/rss.xml"><span>newsgator</span></a></li>
+					<li id="bloglines_reader"><a class="reader" title="Subscribe with Bloglines" href="http://www.bloglines.com/sub/https://thriken.github.io/rss.xml"><span>Bloglines</span></a></li>
+					<li id="inezha_reader"><a class="reader" title="Subscribe with iNezha" href="http://inezha.com/add?url=https://thriken.github.io/rss.xml"><span>iNezha</span></a></li>
+				</ul>
+			</div>
+			<div class="fixed"></div>
+		</div>
+	</div>
+
+	<!-- recent posts -->
+	<div class="widget">
+		<h3>Recent Posts</h3>
+		<ul>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</ul>
+	</div>
+
+	<!-- categories -->
+	<div class="widget">
+		<h3>Category</h3>
+		<ul>
+			
+			<li><a href="https://thriken.github.io/archives/cat_log.html" title="日志">日志</a></li>
+			
+			<li><a href="https://thriken.github.io/archives/cat_network.html" title="网络">网络</a></li>
+			
+			<li><a href="https://thriken.github.io/archives/cat_os.html" title="操作系统">操作系统</a></li>
+			
+			<li><a href="https://thriken.github.io/archives/cat_software.html" title="软件">软件</a></li>
+			
+			<li><a href="https://thriken.github.io/archives/cat_webcode.html" title="编程">编程</a></li>
+			
+			<li><a href="https://thriken.github.io/archives/cat_system.html" title="系统">系统</a></li>
+			
+		</ul>
+	</div>
+
+	<!-- archives -->
+	<div id="tag_cloud" class="widget">
+		<h3>Archives</h3>
+		<ul>
+			
+			<li><a href="https://thriken.github.io/archives/07-01-2026_07-31-2026.html" title="2026 七月">2026 七月</a></li>
+			
+			<li><a href="https://thriken.github.io/archives/03-01-2014_03-31-2014.html" title="2014 三月">2014 三月</a></li>
+			
+			<li><a href="https://thriken.github.io/archives/02-01-2014_02-28-2014.html" title="2014 二月">2014 二月</a></li>
+			
+			<li><a href="https://thriken.github.io/archives/07-01-2013_07-31-2013.html" title="2013 七月">2013 七月</a></li>
+			
+			<li><a href="https://thriken.github.io/archives/06-01-2013_06-30-2013.html" title="2013 六月">2013 六月</a></li>
+			
+			<li><a href="https://thriken.github.io/archives/05-01-2013_05-31-2013.html" title="2013 五月">2013 五月</a></li>
+			
+			<li><a href="https://thriken.github.io/archives/03-01-2013_03-31-2013.html" title="2013 三月">2013 三月</a></li>
+			
+		</ul>
+	</div>
+</div>
+<!-- sidebar north END -->
+
+<div id="centersidebar">
+	<h3>Links</h3>
+	<!-- sidebar east START -->
+	<div id="eastsidebar" class="sidebar">
+		<ul>
+			
+			
+			
+			
+			
+			
+			
+		</ul>
+	</div>
+	<!-- sidebar east END -->
+	<!-- sidebar west START -->
+	<div id="westsidebar" class="sidebar">
+		<ul>
+			
+			
+			
+			
+			
+			
+			
+		</ul>
+	</div>
+	<!-- sidebar west END -->
+	<div class="fixed"></div>
+</div>
+
+<!-- sidebar south START -->
+<div id="southsidebar" class="sidebar">
+	<div class="widget">
+		<p>Powered By<br />
+		<a href="http://www.thingamablog.com">Thingamablog 1.5.1</a>
+		</p>
+	</div>
+</div>
+<!-- sidebar south END -->
+</div>
+<!-- sidebar END -->
+
+	<div class="fixed"></div>
+</div>
+<!-- content END -->
+
+<!-- footer START -->
+<div id="footer">
+	<a id="gotop" href="#" onclick="MGJS.goTop();return false;">Top</a>
+	<div id="copyright">
+		Copyright &copy; 2026 ThingamaBlog
+	</div>
+	<div id="themeinfo">Theme iNove 1.2.3 ported to Thingamablog by The Web Design Women</div>
+	
+</div>
+<!-- footer END -->
+</div>
+<!-- container END -->
+</div>
+<!-- wrap END -->
+</body>
+</html>
+
