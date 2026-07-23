@@ -1,68 +1,52 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>py2htmlblog 发布与部署指南 - ThingamaBlog</title>
-	<link rel="alternate" type="application/rss+xml" title="RSS 2.0 - all posts" href="https://thriken.github.io/rss.xml" />
-	<!-- style START -->
-	<style type="text/css" media="screen">@import url( https://thriken.github.io/css/style.css );</style>
-	<!--[if IE 6]>
-	<link rel="stylesheet" href="https://thriken.github.io/css/ie6.css" type="text/css" media="screen" />
-	<![endif]-->
-	<!-- style END -->
-	<!-- script START -->
-	<script type="text/javascript" src="https://thriken.github.io/js/util.js"></script>
-	<script type="text/javascript" src="https://thriken.github.io/js/menu.js"></script>
-	<!-- script END -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>py2htmlblog 发布与部署指南 — Thriken@Github</title>
+	<meta name="description" content="Thriken 的个人博客 - 记录生活与技术" />
+	<meta name="author" content="Thriken" />
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="rss.xml" />
+	<link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<!-- wrap START -->
-<div id="wrap">
-<!-- container START -->
-<div id="container">
-<!-- header START -->
-<div id="header">
-	<div id="caption">
-		<h1 id="title"><a href="https://thriken.github.io/index.html">ThingamaBlog</a></h1>
-		<div id="tagline">ThingamaBlog</div>
+
+<header class="site-header">
+	<div class="container">
+		<div class="site-branding">
+			<h1 class="site-title"><a href="index.html">Thriken@Github</a></h1>
+			<p class="site-tagline">Thriken@Github</p>
+		</div>
+		<nav class="site-nav">
+			<a href="index.html" class="nav-link">Home</a>
+			<a href="categories.html" class="nav-link">Categories</a>
+			<a href="tags.html" class="nav-link">Tags</a>
+			<a href="archives.html" class="nav-link">Archives</a>
+			
+			<a href="about.html" class="nav-link">About</a>
+			
+			<a href="rss.xml" class="nav-link nav-rss" title="RSS Feed">RSS</a>
+		</nav>
 	</div>
-	<!-- navigation START -->
-	<div id="navigation">
-		<ul id="menus">
-			<li class="current_page_item"><a class="home" title="Home" href="https://thriken.github.io/index.html">Home</a></li>
-			<li class="page_item page-item-2"><a href="https://thriken.github.io/archives.html" title="About">About</a></li>
-			<li><a class="lastmenu" href="javascript:void(0);"></a></li>
-		</ul>
-		<div class="fixed"></div>
-	</div>
-	<!-- navigation END -->
-	<div class="fixed"></div>
-</div>
-<!-- header END -->
-<!-- content START -->
-<div id="content">
+</header>
 
-	<!-- main START -->
-	<div id="main">
+<main class="site-main">
+	<div class="container">
 
-		<p align="center">
-		
-		<a href="https://thriken.github.io/archives/2014/03/entry_11.html">&laquo; 域名和空间</a> |
-		
-		<a href="https://thriken.github.io/index.html">Main</a>
-		
-		| <a href="https://thriken.github.io/archives/2026/07/entry_13.html">py2htmlblog 使用指南 &raquo;</a>
-		
-		</p>
 
-		<div class="post" id="post-19">
-			<h2><a class="title" href="https://thriken.github.io/archives/2026/07/entry_14.html" rel="bookmark">py2htmlblog 发布与部署指南</a></h2>
-			<div class="info">
-				<span class="date">2026-07-22</span>
-				<div class="fixed"></div>
-			</div>
-			<div class="content">
-				<h1>py2htmlblog 发布与部署指南</h1>
+<article class="post-full">
+	<header class="post-header">
+		<h1 class="post-title">py2htmlblog 发布与部署指南</h1>
+		<div class="post-meta">
+			<time datetime="2026-07-22">2026-07-22</time>
+			
+			&middot; <a href="https://thriken.github.io/archives/cat_software.html" class="post-cat">软件</a>
+			
+		</div>
+	</header>
+
+	<div class="post-content">
+		<h1>py2htmlblog 发布与部署指南</h1>
 
 <blockquote>从构建到上线：三种发布方式的详细配置与最佳实践。</blockquote>
 
@@ -464,188 +448,131 @@ python main.py build &amp;&amp; python main.py deploy</code></pre>
 
 <h3>Q: 上传时会覆盖远程已有文件吗？</h3>
 <p><strong>A:</strong> 会。FTP 和 Git 是全量同步。SFTP 会对比修改时间，只上传变更的文件。</p>
-				<p class="under">
-				Categories: <a href="https://thriken.github.io/archives/cat_software.html">软件</a>
-				</p>
-				
-				<div class="fixed"></div>
-				
-			</div>
-		</div>
 
 		
+	</div>
 
-		<div id="pagenavi">
-			<span class="newer"><a href="https://thriken.github.io/archives/2014/03/entry_11.html">&laquo; 域名和空间</a></span>
-			<span class="older"><a href="https://thriken.github.io/archives/2026/07/entry_13.html">py2htmlblog 使用指南 &raquo;</a></span>
-			<div class="fixed"></div>
-		</div>
+	<footer class="post-footer">
+		
+
+		<nav class="post-nav">
+			
+			<a href="https://thriken.github.io/archives/2014/03/entry_11.html" class="post-nav-prev" title="域名和空间">&larr; 域名和空间</a>
+			
+			
+			<a href="https://thriken.github.io/archives/2026/07/entry_13.html" class="post-nav-next" title="py2htmlblog 使用指南">py2htmlblog 使用指南 &rarr;</a>
+			
+		</nav>
+	</footer>
+
+	
+
+	
+</article>
 
 	</div>
-	<!-- main END -->
-<!-- sidebar START -->
-<div id="sidebar">
-<!-- sidebar north START -->
-<div id="northsidebar" class="sidebar">
-	<!-- feeds -->
-	<div class="widget widget_feeds">
-		<div class="content">
-			<div id="subscribe">
-				<a id="feedrss" title="Subscribe to this blog..." href="https://thriken.github.io/rss.xml"><abbr title="Really Simple Syndication">RSS</abbr> feed</a>
-				<ul id="feed_readers">
-					<li id="google_reader"><a class="reader" title="Subscribe with Google" href="http://fusion.google.com/add?feedurl=https://thriken.github.io/rss.xml"><span>Google</span></a></li>
-					<li id="youdao_reader"><a class="reader" title="Subscribe with Youdao" href="http://reader.youdao.com/#url=https://thriken.github.io/rss.xml"><span>Youdao</span></a></li>
-					<li id="xianguo_reader"><a class="reader" title="Subscribe with Xian Guo" href="http://www.xianguo.com/subscribe.php?url=https://thriken.github.io/rss.xml"><span>Xian Guo</span></a></li>
-					<li id="zhuaxia_reader"><a class="reader" title="Subscribe with Zhua Xia" href="http://www.zhuaxia.com/add_channel.php?url=https://thriken.github.io/rss.xml"><span>Zhua Xia</span></a></li>
-					<li id="yahoo_reader"><a class="reader" title="Subscribe with My Yahoo!" href="http://add.my.yahoo.com/rss?url=https://thriken.github.io/rss.xml"><span>My Yahoo!</span></a></li>
-					<li id="newsgator_reader"><a class="reader" title="Subscribe with newsgator" href="http://www.newsgator.com/ngs/subscriber/subfext.aspx?url=https://thriken.github.io/rss.xml"><span>newsgator</span></a></li>
-					<li id="bloglines_reader"><a class="reader" title="Subscribe with Bloglines" href="http://www.bloglines.com/sub/https://thriken.github.io/rss.xml"><span>Bloglines</span></a></li>
-					<li id="inezha_reader"><a class="reader" title="Subscribe with iNezha" href="http://inezha.com/add?url=https://thriken.github.io/rss.xml"><span>iNezha</span></a></li>
+</main>
+
+<footer class="site-footer">
+	<div class="container">
+		<div class="footer-widgets">
+			
+			<div class="footer-widget">
+				<h4>Categories</h4>
+				<ul>
+					
+					<li><a href="https://thriken.github.io/archives/cat_log.html">日志</a></li>
+					
+					<li><a href="https://thriken.github.io/archives/cat_network.html">网络</a></li>
+					
+					<li><a href="https://thriken.github.io/archives/cat_os.html">操作系统</a></li>
+					
+					<li><a href="https://thriken.github.io/archives/cat_software.html">软件</a></li>
+					
+					<li><a href="https://thriken.github.io/archives/cat_webcode.html">编程</a></li>
+					
+					<li><a href="https://thriken.github.io/archives/cat_system.html">系统</a></li>
+					
 				</ul>
 			</div>
-			<div class="fixed"></div>
+			
+			
+			<div class="footer-widget">
+				<h4>Tags</h4>
+				<div class="tag-cloud">
+					
+					<a href="https://thriken.github.io/archives/tag_电视和电脑.html">电视和电脑<sup>1</sup></a>
+					
+					<a href="https://thriken.github.io/archives/tag_这一年.html">这一年<sup>1</sup></a>
+					
+					<a href="https://thriken.github.io/archives/tag_三大式人物.html">三大式人物<sup>1</sup></a>
+					
+					<a href="https://thriken.github.io/archives/tag_现状.html">现状<sup>1</sup></a>
+					
+					<a href="https://thriken.github.io/archives/tag_简化.html">简化<sup>1</sup></a>
+					
+					<a href="https://thriken.github.io/archives/tag_报国.html">报国<sup>1</sup></a>
+					
+					<a href="https://thriken.github.io/archives/tag_细雨.html">细雨<sup>1</sup></a>
+					
+					<a href="https://thriken.github.io/archives/tag_思念.html">思念<sup>1</sup></a>
+					
+					<a href="https://thriken.github.io/archives/tag_祝福.html">祝福<sup>1</sup></a>
+					
+					<a href="https://thriken.github.io/archives/tag_笑话.html">笑话<sup>1</sup></a>
+					
+					<a href="https://thriken.github.io/archives/tag_破鞋.html">破鞋<sup>1</sup></a>
+					
+					<a href="https://thriken.github.io/archives/tag_裤兜.html">裤兜<sup>1</sup></a>
+					
+					<a href="https://thriken.github.io/archives/tag_转载.html">转载<sup>1</sup></a>
+					
+					<a href="https://thriken.github.io/archives/tag_博客.html">博客<sup>1</sup></a>
+					
+					<a href="https://thriken.github.io/archives/tag_023sc.html">023sc<sup>1</sup></a>
+					
+				</div>
+			</div>
+			
+			
+			<div class="footer-widget">
+				<h4>Links</h4>
+				<ul>
+					
+					<li><a href="https://blog.elec.top" target="_blank" title="自托管博客">电子爱好者博客</a></li>
+					
+					<li><a href="https://github.com" target="_blank" title="代码托管平台">GitHub</a></li>
+					
+					<li><a href="https://python.org" target="_blank" title="Python 编程语言">Python 官网</a></li>
+					
+				</ul>
+			</div>
+			
+		</div>
+		<div class="footer-bottom">
+			<p class="copyright">Copyright 2026 Py2HtmlBlog</p>
+			<p class="powered">Powered by <a href="https://github.com">py2htmlblog</a> &middot; <a href="https://thriken.github.io/rss.xml">RSS</a></p>
 		</div>
 	</div>
 
-	<!-- recent posts -->
-	<div class="widget">
-		<h3>Recent Posts</h3>
-		<ul>
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-		</ul>
-	</div>
+	<a href="#" class="back-to-top" id="backToTop" title="回到顶部">&uarr;</a>
+</footer>
 
-	<!-- categories -->
-	<div class="widget">
-		<h3>Category</h3>
-		<ul>
-			
-			<li><a href="https://thriken.github.io/archives/cat_log.html" title="日志">日志</a></li>
-			
-			<li><a href="https://thriken.github.io/archives/cat_network.html" title="网络">网络</a></li>
-			
-			<li><a href="https://thriken.github.io/archives/cat_os.html" title="操作系统">操作系统</a></li>
-			
-			<li><a href="https://thriken.github.io/archives/cat_software.html" title="软件">软件</a></li>
-			
-			<li><a href="https://thriken.github.io/archives/cat_webcode.html" title="编程">编程</a></li>
-			
-			<li><a href="https://thriken.github.io/archives/cat_system.html" title="系统">系统</a></li>
-			
-		</ul>
-	</div>
+<script>(function(w,i,g){w[g]=w[g]||[];if(typeof w[g].push=='function')w[g].push(i)})(window,'G-GXT8QK69XS','google_tags_first_party');</script><script async src="/od9l/"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('set', 'developer_id.dYzg1YT', true);gtag('config', 'G-GXT8QK69XS');</script>
 
-	<!-- archives -->
-	<div id="tag_cloud" class="widget">
-		<h3>Archives</h3>
-		<ul>
-			
-			<li><a href="https://thriken.github.io/archives/07-01-2026_07-31-2026.html" title="2026 七月">2026 七月</a></li>
-			
-			<li><a href="https://thriken.github.io/archives/03-01-2014_03-31-2014.html" title="2014 三月">2014 三月</a></li>
-			
-			<li><a href="https://thriken.github.io/archives/02-01-2014_02-28-2014.html" title="2014 二月">2014 二月</a></li>
-			
-			<li><a href="https://thriken.github.io/archives/07-01-2013_07-31-2013.html" title="2013 七月">2013 七月</a></li>
-			
-			<li><a href="https://thriken.github.io/archives/06-01-2013_06-30-2013.html" title="2013 六月">2013 六月</a></li>
-			
-			<li><a href="https://thriken.github.io/archives/05-01-2013_05-31-2013.html" title="2013 五月">2013 五月</a></li>
-			
-			<li><a href="https://thriken.github.io/archives/03-01-2013_03-31-2013.html" title="2013 三月">2013 三月</a></li>
-			
-		</ul>
-	</div>
-</div>
-<!-- sidebar north END -->
+<script>
+(function() {
+	var btn = document.getElementById('backToTop');
+	window.addEventListener('scroll', function() {
+		btn.style.display = window.scrollY > 400 ? 'block' : 'none';
+	});
+	btn.addEventListener('click', function(e) {
+		e.preventDefault();
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	});
+})();
+</script>
 
-<div id="centersidebar">
-	<h3>Links</h3>
-	<!-- sidebar east START -->
-	<div id="eastsidebar" class="sidebar">
-		<ul>
-			
-			
-			
-			
-			
-			
-			
-		</ul>
-	</div>
-	<!-- sidebar east END -->
-	<!-- sidebar west START -->
-	<div id="westsidebar" class="sidebar">
-		<ul>
-			
-			
-			
-			
-			
-			
-			
-		</ul>
-	</div>
-	<!-- sidebar west END -->
-	<div class="fixed"></div>
-</div>
-
-<!-- sidebar south START -->
-<div id="southsidebar" class="sidebar">
-	<div class="widget">
-		<p>Powered By<br />
-		<a href="http://www.thingamablog.com">Thingamablog 1.5.1</a>
-		</p>
-	</div>
-</div>
-<!-- sidebar south END -->
-</div>
-<!-- sidebar END -->
-
-	<div class="fixed"></div>
-</div>
-<!-- content END -->
-
-<!-- footer START -->
-<div id="footer">
-	<a id="gotop" href="#" onclick="MGJS.goTop();return false;">Top</a>
-	<div id="copyright">
-		Copyright &copy; 2026 ThingamaBlog
-	</div>
-	<div id="themeinfo">Theme iNove 1.2.3 ported to Thingamablog by The Web Design Women</div>
-	
-</div>
-<!-- footer END -->
-</div>
-<!-- container END -->
-</div>
-<!-- wrap END -->
 </body>
 </html>
 
