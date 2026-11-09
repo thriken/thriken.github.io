@@ -1,52 +1,78 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="light">
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>高才生给主席、总理的信： — Thriken@Github</title>
 	<meta name="description" content="Thriken 的个人博客 - 记录生活与技术" />
 	<meta name="author" content="Thriken" />
-	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="https://thriken.github.io/rss.xml" />
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/rss.xml" />
 	<link rel="stylesheet" href="/css/style.css" />
+	<link rel="stylesheet" href="/css/all.min.css" />
+	<link rel="stylesheet" href="/css/blog.css" />
+	<link rel="stylesheet" href="/css/theme-light.css" />
+	<script>
+	/* 首屏前应用配色，避免闪烁；完整逻辑见 js/theme.js */
+	(function () {
+		var d = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+		try {
+			var s = localStorage.getItem('py2htmlblog-enterprise-theme');
+			if (s === 'light' || s === 'dark') d = s;
+		} catch (e) {}
+		document.documentElement.setAttribute('data-theme', d);
+	})();
+	</script>
+	<script defer src="/js/theme.js"></script>
+	<script defer src="/js/main.js"></script>
 </head>
 <body>
 
-<header class="site-header">
+<header class="header">
 	<div class="container">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="https://thriken.github.io/index.html">Thriken@Github</a></h1>
-			<p class="site-tagline">https://thriken.github.io</p>
-		</div>
-		<nav class="site-nav">
-			<a href="https://thriken.github.io/index.html" class="nav-link">Home</a>
-			<a href="https://thriken.github.io/categories.html" class="nav-link">Categories</a>
-			<a href="https://thriken.github.io/tags.html" class="nav-link">Tags</a>
-			<a href="https://thriken.github.io/archives.html" class="nav-link">Archives</a>
+		<a href="/index.html" class="logo">
+			<span class="logo-mark">&#9672;</span>
+			<span class="gradient-text">Thriken@Github</span>
+		</a>
+
+		<nav class="nav-menu">
+			<a href="/index.html" class="">首页</a>
+			<a href="/categories.html">分类</a>
+			<a href="/tags.html">标签</a>
+			<a href="/archives.html">归档</a>
 			
-			<a href="about.html" class="nav-link">About</a>
+			<a href="/about.html">About</a>
 			
-			<a href="https://thriken.github.io/rss.xml" class="nav-link nav-rss" title="RSS Feed">RSS</a>
+			<a href="/rss.xml">RSS</a>
 		</nav>
+
+		<div class="nav-actions">
+			<button type="button" class="theme-toggle" id="themeToggle" title="切换配色" aria-label="切换配色">
+				<i class="fa-solid fa-moon theme-icon-moon"></i><i class="fa-solid fa-sun theme-icon-sun"></i>
+			</button>
+			<a href="/archives.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-newspaper"></i> 浏览文章</a>
+			<button type="button" class="menu-toggle" aria-label="菜单">
+				<span></span><span></span><span></span>
+			</button>
+		</div>
 	</div>
 </header>
 
-<main class="site-main">
+<main>
+
+
+<section class="hero hero-inner">
 	<div class="container">
+		<span class="hero-label">Article</span>
+		<h1>高才生给主席、总理的信：</h1>
+		<p>2013-07-04 &middot; 日志</p>
+	</div>
+</section>
 
-
-<article class="post-full">
-	<header class="post-header">
-		<h1 class="post-title">高才生给主席、总理的信：</h1>
-		<div class="post-meta">
-			<time datetime="2013-07-04">2013-07-04</time>
-			
-			&middot; <a href="https://thriken.github.io/archives/cat_log.html" class="post-cat">日志</a>
-			
-		</div>
-	</header>
-
-	<div class="post-content">
-		<p>主席、总理：你们好！</p>
+<section>
+	<div class="container article-wrap">
+		<article class="post-full">
+			<div class="post-content">
+				<p>主席、总理：你们好！</p>
 
 
 
@@ -109,137 +135,117 @@
 
 <p>以上还不算装修、家具、家电等等费用。</p>
 
-		
+				
+			</div>
+
+			<footer class="post-footer">
+				
+				<div class="post-tags">
+					
+					<a href="/archives/tag_这一年.html" class="tag-link"># 这一年</a>
+					
+					<a href="/archives/tag_三大式人物.html" class="tag-link"># 三大式人物</a>
+					
+				</div>
+				
+
+				<nav class="post-nav">
+					
+					<a href="/archives/2013/07/entry_7.html" class="post-nav-prev">&larr; 中国的现状(经典)</a>
+					
+					
+					<a href="/archives/2014/02/entry_10.html" class="post-nav-next">电视和电脑的区别 &rarr;</a>
+					
+				</nav>
+
+				
+
+				
+			</footer>
+		</article>
 	</div>
+</section>
 
-	<footer class="post-footer">
-		
-		<div class="post-tags">
-			
-			<a href="https://thriken.github.io/archives/tag_这一年.html" class="tag-link">这一年</a>
-			
-			<a href="https://thriken.github.io/archives/tag_三大式人物.html" class="tag-link">三大式人物</a>
-			
-		</div>
-		
-
-		<nav class="post-nav">
-			
-			<a href="https://thriken.github.io/archives/2013/07/entry_7.html" class="post-nav-prev" title="中国的现状(经典)">&larr; 中国的现状(经典)</a>
-			
-			
-			<a href="https://thriken.github.io/archives/2014/02/entry_10.html" class="post-nav-next" title="电视和电脑的区别">电视和电脑的区别 &rarr;</a>
-			
-		</nav>
-	</footer>
-
-	
-
-	
-</article>
-
-	</div>
 </main>
 
-<footer class="site-footer">
+<footer class="footer">
 	<div class="container">
-		<div class="footer-widgets">
-			
-			<div class="footer-widget">
-				<h4>Categories</h4>
-				<ul>
+		<div class="footer-grid">
+			<div class="footer-brand">
+				<a href="/index.html" class="logo">
+					<span class="logo-mark">&#9672;</span>
+					<span class="gradient-text">Thriken@Github</span>
+				</a>
+				<p>Thriken 的个人博客 - 记录生活与技术</p>
+				<div class="footer-social">
+					<a href="/rss.xml" aria-label="RSS 订阅"><i class="fa-solid fa-rss"></i></a>
+					<a href="/archives.html" aria-label="文章归档"><i class="fa-solid fa-box-archive"></i></a>
 					
-					<li><a href="https://thriken.github.io/archives/cat_log.html">日志</a></li>
-					
-					<li><a href="https://thriken.github.io/archives/cat_network.html">网络</a></li>
-					
-					<li><a href="https://thriken.github.io/archives/cat_os.html">操作系统</a></li>
-					
-					<li><a href="https://thriken.github.io/archives/cat_software.html">软件</a></li>
-					
-					<li><a href="https://thriken.github.io/archives/cat_webcode.html">编程</a></li>
-					
-					<li><a href="https://thriken.github.io/archives/cat_system.html">系统</a></li>
-					
-				</ul>
+				</div>
 			</div>
+
 			
-			
-			<div class="footer-widget">
-				<h4>Tags</h4>
-				<div class="tag-cloud">
+			<div class="footer-col">
+				<h4>分类导航</h4>
+				<div class="footer-links">
 					
-					<a href="https://thriken.github.io/archives/tag_电视和电脑.html">电视和电脑<sup>1</sup></a>
+					<a href="/archives/cat_log.html">日志</a>
 					
-					<a href="https://thriken.github.io/archives/tag_这一年.html">这一年<sup>1</sup></a>
+					<a href="/archives/cat_network.html">网络</a>
 					
-					<a href="https://thriken.github.io/archives/tag_三大式人物.html">三大式人物<sup>1</sup></a>
+					<a href="/archives/cat_os.html">操作系统</a>
 					
-					<a href="https://thriken.github.io/archives/tag_现状.html">现状<sup>1</sup></a>
+					<a href="/archives/cat_software.html">软件</a>
 					
-					<a href="https://thriken.github.io/archives/tag_简化.html">简化<sup>1</sup></a>
+					<a href="/archives/cat_webcode.html">编程</a>
 					
-					<a href="https://thriken.github.io/archives/tag_报国.html">报国<sup>1</sup></a>
-					
-					<a href="https://thriken.github.io/archives/tag_细雨.html">细雨<sup>1</sup></a>
-					
-					<a href="https://thriken.github.io/archives/tag_思念.html">思念<sup>1</sup></a>
-					
-					<a href="https://thriken.github.io/archives/tag_祝福.html">祝福<sup>1</sup></a>
-					
-					<a href="https://thriken.github.io/archives/tag_笑话.html">笑话<sup>1</sup></a>
-					
-					<a href="https://thriken.github.io/archives/tag_破鞋.html">破鞋<sup>1</sup></a>
-					
-					<a href="https://thriken.github.io/archives/tag_裤兜.html">裤兜<sup>1</sup></a>
-					
-					<a href="https://thriken.github.io/archives/tag_转载.html">转载<sup>1</sup></a>
-					
-					<a href="https://thriken.github.io/archives/tag_博客.html">博客<sup>1</sup></a>
-					
-					<a href="https://thriken.github.io/archives/tag_023sc.html">023sc<sup>1</sup></a>
+					<a href="/archives/cat_system.html">系统</a>
 					
 				</div>
 			</div>
 			
-			
-			<div class="footer-widget">
-				<h4>Links</h4>
-				<ul>
+
+			<div class="footer-col">
+				<h4>友情链接</h4>
+				<div class="footer-links">
 					
-					<li><a href="https://blog.elec.top" target="_blank" title="自托管博客">电子爱好者博客</a></li>
+						
+						<a href="https://blog.elec.top" target="_blank" rel="noopener" title="自托管博客">电子爱好者博客</a>
+						
+						<a href="https://github.com" target="_blank" rel="noopener" title="代码托管平台">GitHub</a>
+						
+						<a href="https://python.org" target="_blank" rel="noopener" title="Python 编程语言">Python 官网</a>
+						
 					
-					<li><a href="https://github.com" target="_blank" title="代码托管平台">GitHub</a></li>
+				</div>
+			</div>
+
+			<div class="footer-col">
+				<h4>站点导航</h4>
+				<ul class="footer-contact">
+					<li><i class="fa-solid fa-house"></i> <a href="/index.html">首页</a></li>
+					<li><i class="fa-solid fa-folder-open"></i> <a href="/categories.html">分类</a></li>
+					<li><i class="fa-solid fa-tags"></i> <a href="/tags.html">标签</a></li>
+					<li><i class="fa-solid fa-clock-rotate-left"></i> <a href="/archives.html">归档</a></li>
 					
-					<li><a href="https://python.org" target="_blank" title="Python 编程语言">Python 官网</a></li>
+					<li><i class="fa-solid fa-file-lines"></i> <a href="/about.html">About</a></li>
 					
 				</ul>
 			</div>
-			
 		</div>
+
 		<div class="footer-bottom">
-			<p class="copyright">Copyright 2026 Py2HtmlBlog</p>
-			<p class="powered">Powered by <a href="https://github.com">py2htmlblog</a> &middot; <a href="https://thriken.github.io/rss.xml">RSS</a></p>
+			<p>Copyright 2026 Py2HtmlBlog &middot; &copy; 2026 Thriken@Github</p>
+			<div class="footer-bottom-links">
+				<a href="/rss.xml">RSS</a>
+				<a href="/archives.html">归档</a>
+				<a href="https://github.com">py2htmlblog</a>
+			</div>
 		</div>
 	</div>
-
-	<a href="#" class="back-to-top" id="backToTop" title="回到顶部">&uarr;</a>
 </footer>
 
 <script>(function(w,i,g){w[g]=w[g]||[];if(typeof w[g].push=='function')w[g].push(i)})(window,'G-GXT8QK69XS','google_tags_first_party');</script><script async src="/od9l/"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('set', 'developer_id.dYzg1YT', true);gtag('config', 'G-GXT8QK69XS');</script>
-
-<script>
-(function() {
-	var btn = document.getElementById('backToTop');
-	window.addEventListener('scroll', function() {
-		btn.style.display = window.scrollY > 400 ? 'block' : 'none';
-	});
-	btn.addEventListener('click', function(e) {
-		e.preventDefault();
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-	});
-})();
-</script>
 
 </body>
 </html>
