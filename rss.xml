@@ -6,11 +6,50 @@
 <description>Thriken 的个人博客 - 记录生活与技术</description>
 <language>zh-CN</language>
 <copyright>Copyright 2026 Py2HtmlBlog</copyright>
-<lastBuildDate>Mon, 09 Nov 2026 09:22:48 +0800</lastBuildDate>
-<pubDate>Mon, 09 Nov 2026 09:22:48 +0800</pubDate>
+<lastBuildDate>Tue, 10 Nov 2026 09:13:21 +0800</lastBuildDate>
+<pubDate>Tue, 10 Nov 2026 09:13:21 +0800</pubDate>
 <generator>py2htmlblog / enterprise</generator>
 <docs>https://thriken.github.io/rss.xml</docs>
 
+
+<item>
+<title>外国人学中文考试要点</title>
+<description>&lt;p&gt;生鱼片其实是死鱼片；&lt;/p&gt;
+
+&lt;p&gt;等红灯其实是在等绿灯；&lt;/p&gt;
+
+&lt;p&gt;咖啡因来自咖啡果；&lt;/p&gt;
+
+&lt;p&gt;救火其实是在灭火；&lt;/p&gt;
+
+&lt;p&gt;生前其实是死前；&lt;/p&gt;
+
+&lt;p&gt;要你管等同于不要你管；&lt;/p&gt;
+
+&lt;p&gt;坐电梯其实是站电梯；&lt;/p&gt;
+
+&lt;p&gt;原则上可以=不行， 原则上不行=可以；&lt;/p&gt;
+
+&lt;p&gt;夜店是喝酒的，酒店是过夜的。&lt;/p&gt;
+
+&lt;p&gt;有卵用和没卵用是一个意思。&lt;/p&gt;
+
+&lt;p&gt;大胜敌军和大败敌军是一个意思。&lt;/p&gt;
+
+&lt;p&gt;掉地上了和掉地下了是一个意思。&lt;/p&gt;
+
+&lt;p&gt;注意危险和注意安全是一个意思。&lt;/p&gt;
+
+&lt;p&gt;有你好果子吃，和没你好果子吃，是一个意思。&lt;/p&gt;
+
+&lt;p&gt;沙子进眼睛了，和眼睛进沙子了，是一个意思。&lt;/p&gt;
+
+&lt;p&gt;⁢ ⁢ ⁢&lt;/p&gt;</description>
+<link>https://thriken.github.io/archives/2026/11/entry_15.html</link>
+<guid>https://thriken.github.io/archives/2026/11/entry_15.html</guid>
+<category>日志</category>
+<pubDate>Tue, 10 Nov 2026 09:11:42 +0800</pubDate>
+</item>
 
 <item>
 <title>py2htmlblog：把 Markdown 变成博客，就这么简单</title>
